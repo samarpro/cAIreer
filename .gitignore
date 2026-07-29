@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.DS_Store
+.env
+*.log
+
+# Local-first runtime data. Directory placeholders remain tracked.
+data/app.db
+data/app.db-*
+data/artifacts/**
+!data/artifacts/.gitkeep
+data/browser-profile/**
+!data/browser-profile/.gitkeep
+data/memory/**
+!data/memory/.gitkeep
+
+# Frontend output
+apps/web/dist/
+apps/web/.vite/
