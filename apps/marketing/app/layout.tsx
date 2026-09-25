@@ -12,13 +12,13 @@ const fontMono = Geist_Mono({
 })
 
 export const metadata = {
-  title: "cAIreer | Keep showing up",
+  title: "cAIreer | Less copy-paste. Same you.",
   description:
-    "cAIreer carries the repetitive parts of your job search while every application waits for your judgment.",
+    "A Chrome side panel for Seek. cAIreer reads the listing, drafts from your own profile in the voice you set, and submits nothing until you approve it.",
 }
 
 export const viewport = {
-  themeColor: "#0d0d0b",
+  themeColor: "#f1efe9",
 }
 
 export default function RootLayout({

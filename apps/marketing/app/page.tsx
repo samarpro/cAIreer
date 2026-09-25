@@ -1,194 +1,314 @@
-import {
-  ArrowDown,
-  ArrowRight,
-  Check,
-  CheckCircle2,
-  Circle,
-  FileCheck2,
-  Fingerprint,
-  LockKeyhole,
-  Radar,
-  Search,
-  ShieldCheck,
-  Sparkles,
-  UserRound,
-} from "lucide-react"
+import { ArrowDown, ArrowRight, Plus } from "lucide-react"
+import { Fragment, type CSSProperties } from "react"
 
-import { CursorField } from "@/components/cursor-field"
+import { HeroDemo } from "@/components/hero-demo"
+import { RevealObserver } from "@/components/reveal-observer"
+import { ScrollStory } from "@/components/scroll-story"
+import { VoiceMixer } from "@/components/voice-mixer"
 import "./marketing.css"
 
-const steps = [
-  ["I", "Lay out the material", "Bring the projects, constraints, preferences, and rough edges that a normal resume leaves behind."],
-  ["II", "Name your standard", "Choose the kind of work, tone, and boundaries you are willing to stand behind."],
-  ["III", "Approve the act", "Read the draft in plain view. Change it freely. Nothing external happens until you say yes."],
+const handOff = [
+  "Rewriting the same summary for the ninth role this week",
+  "Reordering bullet points to match a job ad",
+  "Typing your uni, your dates, and your address into another portal",
+  "Starting every cover letter from a blank page",
 ]
 
-const principles = [
-  [Fingerprint, "Sound like yourself", "Set the tone and edit every draft. If a sentence feels wrong, it does not leave."],
-  [LockKeyhole, "Nothing sends itself", "Every application and note waits for you. You see the exact words before anyone else does."],
-  [ShieldCheck, "Share less by default", "cAIreer uses the information needed for the task and leaves the rest alone."],
-] as const
+const keep = ["Where you apply.", "What you claim.", "How you sound.", "When it gets sent."]
+
+const roles = [
+  "Graduate Analyst",
+  "Junior Developer",
+  "Marketing Coordinator",
+  "Customer Success Associate",
+  "Junior Data Analyst",
+  "Graduate Engineer",
+  "Policy Officer",
+  "Product Intern",
+  "UX Researcher",
+  "Finance Graduate",
+]
+
+const guardrails = [
+  [
+    "Submit is locked.",
+    "Submitting, sending, or posting needs an approval record that only you can create. The assistant has no way to make one.",
+  ],
+  [
+    "You see every action.",
+    "Each click and each typed field shows up in the side panel before it happens, on the tab you have open.",
+  ],
+  [
+    "It stays out of your accounts.",
+    "cAIreer reads the visible text of the job page. It skips password fields and never stores your cookies.",
+  ],
+  [
+    "Your stories, not invented ones.",
+    "Drafts come from the profile you wrote. You can edit or throw away every one of them.",
+  ],
+]
+
+const log = [
+  ["21:14:02", "read", "seek.com.au/job/81234567"],
+  ["21:14:05", "match", "3 of 4 asks found in your profile"],
+  ["21:14:19", "type", "Cover letter field, 212 words"],
+  ["21:14:20", "wait", "Submit needs your approval"],
+  ["21:16:41", "you", "Approved after 2 edits"],
+  ["21:16:42", "submit", "Application sent"],
+]
+
+const faqs = [
+  [
+    "Does it apply to jobs on its own?",
+    "No. It prepares the application and fills in forms while you watch. Only your approval lets it press submit, and that rule lives in the server, not in a setting you might forget about.",
+  ],
+  [
+    "Which job sites does it work with?",
+    "Seek first, on job pages you open yourself. It doesn't crawl job boards in the background or apply to things you haven't seen.",
+  ],
+  [
+    "How does it know how I sound?",
+    "You set it up once. Upload your résumé, add the experience that never fit on one page, and write a few notes about how you want to come across. You can change them per application.",
+  ],
+  [
+    "When can I use it?",
+    "We're building it now and talking to students and early-career job seekers first. Early access opens soon.",
+  ],
+]
 
 function Wordmark() {
-  return <a className="wordmark" href="#top" aria-label="cAIreer home" translate="no"><span>c</span>cAIreer</a>
-}
-
-function StoicSeal() {
   return (
-    <div className="stoic-seal" aria-hidden="true">
-      <span>focus</span>
-      <i />
-      <span>on what is yours</span>
-    </div>
+    <a className="wordmark" href="#top" aria-label="cAIreer home" translate="no">
+      c<span>AI</span>reer
+    </a>
   )
 }
 
-function ProductPreview() {
-  return (
-    <div className="preview" role="img" aria-label="Illustrative cAIreer application workspace showing roles assessed and drafts waiting for approval">
-      <div className="preview-bar">
-        <i /><i /><i />
-        <span>Draft chamber</span>
-        <b><i /> Waiting</b>
-      </div>
-      <div className="preview-layout">
-        <aside className="preview-side">
-          <em>c</em><i className="active" /><i /><i /><small>SK</small>
-        </aside>
-        <div className="preview-main">
-          <header className="preview-heading">
-            <div><span className="preview-label">TODAY&apos;S WORK</span><h3>Three honest drafts.</h3></div>
-            <span className="preview-action">Review bench <span>3</span></span>
-          </header>
-          <div className="signal-grid">
-            <article className="signal match">
-              <div className="signal-icon"><Radar size={17} aria-hidden="true" /></div>
-              <p><small>Worth attention</small><strong>Product Analyst</strong><small>Strong fit · Melbourne</small></p>
-              <b>88</b>
-            </article>
-            <article className="signal"><span className="preview-label">THIS WEEK</span><strong className="metric">12</strong><small>roles weighed</small></article>
-            <article className="signal dark"><Sparkles size={16} aria-hidden="true" /><p>2 drafts are ready for judgment.</p><ArrowRight size={16} aria-hidden="true" /></article>
-          </div>
-          <div className="application-panel">
-            <header><div><span className="preview-label">APPLICATION IN REVIEW</span><h4>Associate Product Manager</h4></div><span>At your desk</span></header>
-            <div className="application-body">
-              <div className="document">
-                <div className="doc-head"><b>S</b><p><strong>Sam Kanu</strong><small>Product · AI · Operations</small></p></div>
-                <i className="wide" /><i /><i className="medium" /><hr /><i className="wide" /><i className="short" />
-              </div>
-              <div className="review-list">
-                <div><CheckCircle2 aria-hidden="true" /><p><strong>Stories chosen</strong><small>3 grounded examples</small></p></div>
-                <div><CheckCircle2 aria-hidden="true" /><p><strong>Tone restrained</strong><small>Clear, not inflated</small></p></div>
-                <div className="current"><Circle aria-hidden="true" /><p><strong>Your judgment</strong><small>Required before sending</small></p></div>
-                <span className="review-action">Read the draft <ArrowRight aria-hidden="true" /></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function FlowDiagram() {
-  const nodes = [
-    [Search, "NOTICE", "A role worth weighing"],
-    [Sparkles, "COMPOSE", "Your story, shaped"],
-    [UserRound, "JUDGMENT", "You examine the work"],
-    [FileCheck2, "ACTION", "Only after approval"],
-  ] as const
-  return (
-    <div className="flow-card">
-      {nodes.map(([Icon, meta, title], index) => (
-        <div className="flow-item" key={title}>
-          <article className={index === 2 ? "flow-node accent" : "flow-node"}>
-            <span><Icon aria-hidden="true" /></span><span className="flow-meta">{meta}</span><strong>{title}</strong>
-          </article>
-          {index < nodes.length - 1 && <ArrowRight className="flow-arrow" aria-hidden="true" />}
-        </div>
-      ))}
-    </div>
-  )
+function Words({ text, offset = 0 }: { text: string; offset?: number }) {
+  const words = text.split(" ")
+  return words.map((word, index) => (
+    <Fragment key={index}>
+      <span className="word" style={{ "--i": offset + index } as CSSProperties}>
+        <span>{word}</span>
+      </span>
+      {index < words.length - 1 && " "}
+    </Fragment>
+  ))
 }
 
 export default function Page() {
   return (
-    <div id="top" className="marketing-page">
-      <CursorField />
-      <a className="skip-link" href="#main-content">Skip to main content</a>
-      <nav className="site-nav" aria-label="Main navigation">
-        <Wordmark />
-        <div className="nav-links">
-          <a href="#how-it-works">How it works</a><a href="#control">Your control</a>
-          <a href="#early-access" className="nav-cta">Join early access <ArrowRight aria-hidden="true" /></a>
-        </div>
-      </nav>
+    <div id="top" className="site">
+      <RevealObserver />
+      <div className="scroll-meter" aria-hidden="true" />
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
 
-      <main id="main-content">
-      <section className="hero shell">
-        <div className="hero-rings" aria-hidden="true" />
-        <div className="hero-copy">
-          <div className="availability"><i /> Private research preview</div>
-          <h1>Keep showing up.<br /><span>We&apos;ll carry the repetition.</span></h1>
-          <p>You bring your story and judgment. cAIreer keeps the search moving, prepares each application, and waits for your approval.</p>
-          <div className="hero-actions">
-            <a className="primary-button" href="#early-access">Join early access <ArrowRight aria-hidden="true" /></a>
-            <a className="secondary-button" href="#how-it-works">Read the method <ArrowDown aria-hidden="true" /></a>
+      <header className="nav">
+        <div className="nav-inner shell">
+          <Wordmark />
+          <nav aria-label="Main">
+            <a href="#how">How it works</a>
+            <a href="#voice">Your voice</a>
+            <a href="#control">Control</a>
+            <a href="#faq">FAQ</a>
+            <a className="nav-cta" href="#early-access">
+              Early access
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main">
+        <section className="hero shell" aria-labelledby="hero-title">
+          <p className="kicker hero-kicker">
+            <i /> A Chrome side panel for Seek · In development
+          </p>
+          <h1 id="hero-title" className="hero-title">
+            <span className="line">
+              <Words text="Less copy-paste." />
+            </span>{" "}
+            <span className="line">
+              <Words text="Same" offset={2} />{" "}
+              <span className="word you" style={{ "--i": 3 } as CSSProperties}>
+                <span>you.</span>
+                <svg viewBox="0 0 220 24" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M4 16 C 50 6, 120 4, 216 12 M 30 20 C 90 14, 150 14, 200 18" />
+                </svg>
+              </span>
+            </span>
+          </h1>
+
+          <div className="hero-grid">
+            <div className="hero-copy">
+              <p>
+                Open a job on Seek. cAIreer reads the listing, pulls the right
+                experience from your profile, and drafts the cover letter in the voice
+                you set. Then it stops. Nothing gets submitted until you approve it.
+              </p>
+              <div className="hero-actions">
+                <a className="btn btn-primary" href="#early-access">
+                  Get early access <ArrowRight aria-hidden="true" />
+                </a>
+                <a className="btn btn-ghost" href="#how">
+                  See how it works <ArrowDown aria-hidden="true" />
+                </a>
+              </div>
+              <p className="hero-note">
+                For students and early-career job seekers in Australia.
+              </p>
+            </div>
+            <div className="hero-demo-wrap">
+              <HeroDemo />
+            </div>
           </div>
-          <small className="hero-note"><Check aria-hidden="true" /> Built for ambitious students and early-career professionals who want help, not replacement</small>
-        </div>
-        <div className="hero-preview-wrap">
-          <StoicSeal />
-          <ProductPreview />
-        </div>
-      </section>
+        </section>
 
-      <section className="statement shell section-pad">
-        <p className="kicker">WHAT IS YOURS</p>
-        <div>
-          <h2>You cannot control the outcome. You can control the work.</h2>
-          <aside><p>Choose the roles. Tell the truth about your experience. Decide how you want to be seen. Those choices stay with you.</p><strong>Searching, sorting, and reformatting do not need your best hours.</strong></aside>
-        </div>
-      </section>
-
-      <section id="how-it-works" className="process shell section-pad">
-        <div className="section-heading"><p className="kicker">THE METHOD</p><h2>Do the work that needs you. Hand off the rest.</h2><p>cAIreer handles the searching, sorting, and first draft. You make the choices that shape your reputation.</p></div>
-        <FlowDiagram />
-        <div className="steps">
-          {steps.map(([number, title, body]) => <article key={number}><span>{number}</span><div><h3>{title}</h3><p>{body}</p></div></article>)}
-        </div>
-      </section>
-
-      <section id="control" className="control">
-        <div className="shell control-inner">
-          <div className="control-copy"><p className="kicker">YOUR CONTROL</p><h2>Nothing speaks for you without you.</h2><p>Every draft stays visible. Every boundary stays clear. Every application waits for your approval.</p></div>
-          <div className="principles">
-            {principles.map(([Icon, title, body]) => <article key={title}><Icon aria-hidden="true" /><h3>{title}</h3><p>{body}</p></article>)}
+        <div className="marquee" aria-label="Example roles">
+          <div className="marquee-track">
+            {[0, 1].map((copy) => (
+              <ul key={copy} aria-hidden={copy === 1 ? true : undefined}>
+                {roles.map((role) => (
+                  <li key={role}>{role}</li>
+                ))}
+              </ul>
+            ))}
           </div>
         </div>
-      </section>
 
-      <section className="perspective shell section-pad">
-        <div className="perspective-card">
-          <div className="orbit-wrap"><i className="orbit one" /><i className="orbit two" /><b>c</b></div>
-          <div className="perspective-copy"><p className="kicker">A STEADIER PRACTICE</p><h2>Make consistency easier. Keep judgment human.</h2><p>Each correction improves the next draft. Each approved story becomes useful context. cAIreer learns your standards while you remain the author.</p></div>
-        </div>
-      </section>
-
-      <section id="early-access" className="cta shell">
-        <div className="cta-card">
-          <span className="cta-icon"><Sparkles aria-hidden="true" /></span><p className="kicker">EARLY ACCESS</p>
-          <h2>You have enough to carry.</h2>
-          <p>We are speaking with students and early-career professionals who want help staying consistent without handing over their voice.</p>
-          <div className="waitlist-status" role="status">
-            <span>Waitlist opens soon</span>
-            <small>Signup storage is being connected. We are not collecting email addresses yet.</small>
+        <section className="handoff shell" aria-labelledby="handoff-title">
+          <div className="handoff-head">
+            <p className="kicker">The trade</p>
+            <h2 id="handoff-title">Hand over the busywork.</h2>
           </div>
-        </div>
-      </section>
+          <ol className="handoff-list">
+            {handOff.map((item, index) => (
+              <li key={item} data-reveal style={{ "--i": index } as CSSProperties}>
+                <span className="handoff-num">{String(index + 1).padStart(2, "0")}</span>
+                <span>
+                  <s>{item}</s>
+                </span>
+              </li>
+            ))}
+          </ol>
+          <div className="keep" data-reveal>
+            <h3>Keep the parts that are you.</h3>
+            <ul>
+              {keep.map((item, index) => (
+                <li key={item} style={{ "--i": index } as CSSProperties}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <ScrollStory />
+
+        <section id="voice" className="voice shell" aria-labelledby="voice-title">
+          <div className="voice-head" data-reveal>
+            <p className="kicker">Your voice</p>
+            <h2 id="voice-title">Most AI writing sounds the same. Yours shouldn&apos;t.</h2>
+            <p>
+              You decide how much confidence goes into a sentence and how formal it
+              reads. Set it once, then nudge it per application. Try it on this
+              opening line.
+            </p>
+          </div>
+          <VoiceMixer />
+        </section>
+
+        <section id="control" className="guard" aria-labelledby="guard-title">
+          <div className="shell">
+            <p className="kicker">Control</p>
+            <h2 id="guard-title" className="guard-title" data-reveal>
+              <span>It can type.</span> <em>It can&apos;t press send.</em>
+            </h2>
+            <div className="guard-grid">
+              <div className="guard-rules">
+                {guardrails.map(([title, body], index) => (
+                  <article key={title} data-reveal style={{ "--i": index } as CSSProperties}>
+                    <h3>{title}</h3>
+                    <p>{body}</p>
+                  </article>
+                ))}
+              </div>
+              <figure className="log" data-reveal>
+                <figcaption>
+                  <span>Activity</span>
+                  <span>Junior Data Analyst</span>
+                </figcaption>
+                <ol>
+                  {log.map(([time, kind, detail], index) => (
+                    <li
+                      key={time}
+                      className={`log-${kind}`}
+                      style={{ "--i": index } as CSSProperties}
+                    >
+                      <time>{time}</time>
+                      <b>{kind}</b>
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ol>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="faq shell" aria-labelledby="faq-title">
+          <h2 id="faq-title">Fair questions.</h2>
+          <div className="faq-list">
+            {faqs.map(([question, answer]) => (
+              <details key={question}>
+                <summary>
+                  {question}
+                  <Plus aria-hidden="true" />
+                </summary>
+                <p>{answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section id="early-access" className="cta shell" aria-labelledby="cta-title">
+          <div className="cta-card" data-reveal>
+            <p className="kicker">Early access</p>
+            <h2 id="cta-title">Keep your voice. Lose the admin.</h2>
+            <div className="cta-status" role="status">
+              <i />
+              <p>
+                <strong>The waitlist opens soon.</strong> We&apos;re not collecting
+                email addresses yet. When we are, the form goes right here.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
 
-      <footer className="site-footer shell"><Wordmark /><p>Keep the judgment. Lose the repetition.</p><span>© {new Date().getFullYear()} cAIreer</span></footer>
+      <footer className="footer">
+        <div className="footer-mark" data-reveal aria-hidden="true">
+          {"cAIreer".split("").map((letter, index) => (
+            <span
+              key={index}
+              className={index === 1 || index === 2 ? "is-ai" : undefined}
+              style={{ "--i": index } as CSSProperties}
+            >
+              {letter}
+            </span>
+          ))}
+        </div>
+        <div className="footer-row shell">
+          <span>© {new Date().getFullYear()} cAIreer</span>
+          <nav aria-label="Footer">
+            <a href="#how">How it works</a>
+            <a href="#voice">Your voice</a>
+            <a href="#control">Control</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+        </div>
+      </footer>
     </div>
   )
 }
