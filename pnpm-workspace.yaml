@@ -1,0 +1,10 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+  - "services/*"
+
+allowBuilds:
+  esbuild: true
+
+minimumReleaseAgeExclude:
+  - cn@0.3.2
