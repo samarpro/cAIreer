@@ -33,7 +33,7 @@ The central idea is **separation of responsibilities**:
 
 - `apps/marketing` owns the public website. It can ship without product login or the Python API.
 - `apps/app` owns the signed-in product UI. It talks to `services/api`. It is not the marketing site.
-- `services/api` owns product HTTP APIs, PostgreSQL writes, agent runs, and every inference call. The product app never sees the provider wire.
+- `services/api` owns every inference call, including evaluation requests. Its initial model endpoint is `POST /internal/models/evaluate`; trusted evaluation scripts call it over HTTP. The product app never sees the provider wire.
 - `packages/ui` owns shared shadcn/ui components used by both Next.js apps.
 - PostgreSQL owns durable business state.
 
@@ -66,7 +66,7 @@ Do not add Redis, object storage, or extra workers until a real feature needs th
 | Primary database | PostgreSQL | Confirmed | Users, profiles, jobs, applications, approvals, workflow state |
 | Python database access | Not selected | Undecided | Schema, migrations, and queries in the API |
 | Agent orchestration | Python with Pydantic AI in `services/api` | Confirmed | Agent tools, structured output, guardrails, decisions |
-| Inference | Vercel AI Gateway, called from Python only | Confirmed | Provider calls for product work and for `services/experiments` checks. See [0005](docs/decisions/0005-python-owns-inference.md) |
+| Inference | Vercel AI Gateway, called from Python only | Confirmed | Only `services/api` calls providers; `evals` and remaining experiment scripts use its HTTP endpoint. See [0005](docs/decisions/0005-python-owns-inference.md) |
 | Product UI wire | FastAPI responses | Confirmed | `apps/app` knows product requests and responses. It does not know model ids, gateway URLs, or provider payloads |
 | Background work | Not selected | Undecided | Queueing only when a workflow cannot finish in a request |
 | File storage | Not selected | Undecided | Resumes and generated documents when needed |
@@ -122,7 +122,7 @@ Owns:
 - Product HTTP API, which is the only wire `apps/app` uses
 - PostgreSQL access
 - Pydantic AI agents, tools, structured outputs, and guardrails
-- Calls to Vercel AI Gateway
+- Calls to Vercel AI Gateway, including the internal typed evaluation endpoint used by model-based evals
 - Recording approval decisions and external-action attempts
 - Timeouts and API-level errors
 
@@ -262,5 +262,9 @@ The monorepo exists so later slices have a place to land. New product infrastruc
 - Production monitoring and error-reporting provider
 - Data retention and deletion policy
 - Logical model purposes, selection policy, and permitted fallback rules
-- How Pydantic AI in `services/api` calls Vercel AI Gateway once a check leaves `services/experiments`
+- How future Pydantic AI agents use the API-owned inference client; the initial Jev route uses HTTP directly
 - Background queue only if request/response work is no longer enough
+
+## Initial model gateway slice
+
+FastAPI owns `POST /internal/models/evaluate`, with an internal bearer token, server-selected Jev model, a fixed Vercel gateway URL, a 60-second timeout, and sanitized upstream errors. Responses preserve gateway usage and cost metadata. See [API setup and eval example](services/api/README.md). Model-based evals need a running API; deterministic PDF parsing does not. This infrastructure does not integrate an experimental capability into product screens.

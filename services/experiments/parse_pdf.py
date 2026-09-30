@@ -7,21 +7,6 @@ from pathlib import Path
 
 from pypdf import PdfReader
 
-GATEWAY_URL = "https://ai-gateway.vercel.sh/v1/evaluate"
-MODEL = "typesafe-ai/jev"
-ROOT_ENV = Path(__file__).resolve().parents[2] / ".env"
-
-
-def load_env(path: Path) -> None:
-    if not path.exists():
-        return
-    for line in path.read_text().splitlines():
-        stripped = line.strip()
-        if not stripped or stripped.startswith("#") or "=" not in stripped:
-            continue
-        key, value = stripped.split("=", 1)
-        os.environ.setdefault(key.strip(), value.strip().strip("\"'"))
-
 
 def read_pdf_text(path: Path) -> str:
     reader = PdfReader(path)
@@ -36,14 +21,7 @@ def read_pdf_text(path: Path) -> str:
 
 
 def evaluate_pdf(text: str) -> dict:
-    api_key = os.environ.get("AI_GATEWAY_API_KEY")
-    if not api_key:
-        raise SystemExit(
-            "AI_GATEWAY_API_KEY is missing. Add it to the repo .env file."
-        )
-
     body = {
-        "model": MODEL,
         "state": text,
         "questions": {
             "is_resume": {
@@ -70,28 +48,40 @@ def evaluate_pdf(text: str) -> dict:
             },
         },
     }
+    return post_json(body)
+
+
+def post_json(body: dict) -> dict:
+    token = os.environ.get("MODEL_GATEWAY_TOKEN")
+    if not token:
+        raise SystemExit(
+            "MODEL_GATEWAY_TOKEN is missing. Use the API's internal token."
+        )
+    api_url = os.environ.get("MODEL_GATEWAY_API_URL", "http://127.0.0.1:8000")
     request = urllib.request.Request(
-        GATEWAY_URL,
+        f"{api_url.rstrip('/')}/internal/models/evaluate",
         data=json.dumps(body).encode(),
         headers={
-            "Authorization": f"Bearer {api_key}",
+            "Authorization": f"Bearer {token}",
             "Content-Type": "application/json",
         },
         method="POST",
     )
     try:
-        with urllib.request.urlopen(request) as response:
+        with urllib.request.urlopen(request, timeout=65) as response:
             return json.load(response)
     except urllib.error.HTTPError as error:
-        detail = error.read().decode()
-        raise SystemExit(f"AI Gateway returned {error.code}: {detail}") from error
+        raise SystemExit(f"Model API returned {error.code}") from error
+    except urllib.error.URLError as error:
+        raise SystemExit(
+            "Model API is unavailable. Start services/api first."
+        ) from error
 
 
 def main() -> None:
     if len(sys.argv) != 2:
         raise SystemExit(f"Usage: python {Path(__file__).name} <file.pdf>")
 
-    load_env(ROOT_ENV)
     text = read_pdf_text(Path(sys.argv[1]))
     # print(text)
     result = evaluate_pdf(text)

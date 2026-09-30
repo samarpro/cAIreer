@@ -12,11 +12,13 @@ Product requests from the signed-in app always need the same checks: auth, valid
 
 ## Decision
 
-`services/api` is the only product program that talks to inference. It calls Vercel AI Gateway from Python. Pydantic AI stays the agent layer inside that service. The gateway is how that service reaches models, including evaluation models such as `typesafe-ai/jev`.
+`services/api` is the only program that talks to inference, including calls made for evaluations. It calls Vercel AI Gateway from Python. Pydantic AI stays the agent layer inside that service. The gateway is how that service reaches models, including evaluation models such as `typesafe-ai/jev`.
 
 `apps/app` sends product requests to FastAPI and renders the responses. It does not receive model ids, provider URLs, gateway payloads, or provider keys. `apps/marketing` does not call inference at all.
 
-`services/experiments` may call the gateway while a check is still a loose script. A check that becomes a product feature moves into `services/api`. It does not grow a TypeScript client.
+`evals` and any remaining `services/experiments` scripts call FastAPI over HTTP. They never call a model provider or Vercel AI Gateway directly. Provider keys and model selection belong to the API process. Deterministic evaluation code still runs independently. A capability that becomes a product feature moves into `services/api` without creating another inference path.
+
+The initial internal endpoint is `POST /internal/models/evaluate`, supporting typed Jev questions. A shared internal bearer token protects local evaluation access. This endpoint is not a browser-facing product contract. See [API setup](../../services/api/README.md).
 
 ## Consequences
 

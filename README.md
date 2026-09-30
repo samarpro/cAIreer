@@ -32,3 +32,7 @@ Run the shared quality gate before committing:
 pnpm check
 pnpm build
 ```
+
+## Model calls
+
+All model calls, including evaluations, go through FastAPI. The first endpoint supports typed Jev evaluations. See [model gateway setup](services/api/README.md) for server configuration, the HTTP-only eval client, and contract tests.

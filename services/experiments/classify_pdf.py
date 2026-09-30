@@ -1,17 +1,12 @@
 import json
-import os
 import sys
 import time
-import urllib.error
-import urllib.request
 from pathlib import Path
 
 from labels import LABELS
-from parse_pdf import ROOT_ENV, load_env
+from parse_pdf import post_json
 from pdf_lines import PdfLine, extract_lines
 
-GATEWAY_URL = "https://ai-gateway.vercel.sh/v1/evaluate"
-MODEL = "typesafe-ai/jev"
 BATCH_SIZE = 2
 MAX_LINE_CHARS = 400
 
@@ -36,54 +31,17 @@ def state_for(lines: list[PdfLine], offset: int) -> str:
 
 
 def evaluate_lines(lines: list[PdfLine]) -> dict:
-    api_key = os.environ.get("AI_GATEWAY_API_KEY")
-    if not api_key:
-        raise SystemExit(
-            "AI_GATEWAY_API_KEY is missing. Add it to the repo .env file."
-        )
-
     answers: dict = {}
     for start in range(0, len(lines), BATCH_SIZE):
         batch = lines[start : start + BATCH_SIZE]
         body = {
-            "model": MODEL,
             "state": state_for(batch, start),
             "questions": questions_for(batch, start),
         }
-        payload = post_json(body, api_key)
+        payload = post_json(body)
         answers.update(payload["answers"])
         time.sleep(0.25)
     return answers
-
-
-def post_json(body: dict, api_key: str) -> dict:
-    data = json.dumps(body).encode()
-    delay = 1
-    last_error = ""
-    for _attempt in range(3):
-        request = urllib.request.Request(
-            GATEWAY_URL,
-            data=data,
-            headers={
-                "Authorization": f"Bearer {api_key}",
-                "Content-Type": "application/json",
-            },
-            method="POST",
-        )
-        try:
-            with urllib.request.urlopen(request) as response:
-                return json.load(response)
-        except urllib.error.HTTPError as error:
-            last_error = error.read().decode()
-            if error.code not in {429, 503, 529}:
-                raise SystemExit(
-                    f"AI Gateway returned {error.code}: {last_error}"
-                ) from error
-            time.sleep(delay)
-            delay *= 2
-    raise SystemExit(
-        f"AI Gateway stayed unavailable after 3 tries ({len(data)} bytes): {last_error}"
-    )
 
 
 def annotate(lines: list[PdfLine], answers: dict) -> list[dict]:
@@ -107,7 +65,6 @@ def main() -> None:
     if len(sys.argv) != 2:
         raise SystemExit(f"Usage: python {Path(__file__).name} <file.pdf>")
 
-    load_env(ROOT_ENV)
     lines = extract_lines(Path(sys.argv[1]))
     if not lines:
         raise SystemExit(
