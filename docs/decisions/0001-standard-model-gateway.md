@@ -1,10 +1,13 @@
 # ADR 0001: Standard model gateway
 
-**Status:** Accepted
+**Status:** Superseded by [0003](./0003-two-apps-python-backend.md)
+
+Agent and model access now live in Python through Pydantic AI. Do not add a TypeScript model gateway unless a later decision revives this boundary.
+Model provider will be Vercel AI Gateway. 
 
 ## Context
 
-A2A Hire needs OpenAI, Ollama, and LM Studio without spreading provider-specific request formats, model names, connection settings, and error handling throughout the web application and agent workflows.
+cAIreer needs OpenAI, Ollama, and LM Studio without spreading provider-specific request formats, model names, connection settings, and error handling throughout the web application and agent workflows.
 
 Ollama and LM Studio both offer OpenAI-compatible endpoints, but compatibility is partial and feature behaviour can differ by runtime, endpoint, version, and loaded model. Compatibility reduces adapter work; it does not remove the need for an application-owned boundary.
 
@@ -16,7 +19,7 @@ All TypeScript code accesses models through one internal contract for health che
 
 Use an OpenAI-compatible transport for shared wire behaviour and provider adapters for runtime-specific differences. Integrate the gateway with the OpenAI Agents SDK through its `ModelProvider` interface.
 
-A2A Hire owns conversation history. Do not depend on provider-side response or conversation state for portable workflows.
+cAIreer owns conversation history. Do not depend on provider-side response or conversation state for portable workflows.
 
 Python automation does not talk to model providers directly. If a Python use case later requires inference, add a versioned internal HTTP surface over the gateway.
 

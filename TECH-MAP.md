@@ -1,6 +1,6 @@
-# A2A Hire Technology Map
+# cAIreer Technology Map
 
-This document is the shared technical reference for A2A Hire. Read it before making architectural or dependency decisions. Update it when a decision changes.
+This document is the shared technical reference for cAIreer. Read it before making architectural or dependency decisions. Update it when a decision changes.
 
 ## Status legend
 
@@ -10,7 +10,9 @@ This document is the shared technical reference for A2A Hire. Read it before mak
 
 ## Product boundary
 
-The first release serves job seekers. It helps them discover and evaluate jobs, prepare tailored application material, and automate repetitive steps while keeping them in control of how they are represented.
+The initial validation release is a cinematic public launch website for ambitious students and early-career professionals who already use AI in their job search. It introduces cAIreer's worldview and product promise to the market, explains the intended experience, captures early-access interest, and recruits potential research participants before further product infrastructure is built.
+
+The first functional product release serves job seekers. It helps them discover and evaluate jobs, prepare tailored application material, and automate repetitive steps while keeping them in control of how they are represented.
 
 Applying, sending outreach, or performing another consequential external action always requires an explicit human approval record.
 
@@ -20,131 +22,120 @@ Employer-side agents negotiating directly with candidate agents are a later prod
 
 ```mermaid
 flowchart LR
-    U["Job seeker"] --> W["Next.js web application"]
-    W --> DB["PostgreSQL"]
-    W --> FS["Object storage"]
-    W --> Q["Redis job queue"]
-    Q --> AW["TypeScript agent worker"]
-    AW --> ASDK["OpenAI Agents SDK"]
-    ASDK --> MG["Model gateway"]
-    W --> MG
-    MG --> OAI["OpenAI API"]
-    MG --> OL["Ollama"]
-    MG --> LMS["LM Studio"]
-    AW --> PY["Python automation service"]
-    AW --> DB
-    PY --> EXT["Job sites and external services"]
-    AW --> Q
-    W -. "status updates" .-> U
+    U["Job seeker"] --> M["apps/marketing Next.js"]
+    U --> A["apps/app Next.js"]
+    A --> API["services/api FastAPI"]
+    API --> DB["PostgreSQL"]
+    API --> GW["Vercel AI Gateway"]
 ```
 
 The central idea is **separation of responsibilities**:
 
-- Next.js owns the user-facing product and normal application API.
-- The TypeScript worker owns agent decisions and long-running workflow coordination.
-- The model gateway owns every model-provider connection and presents one internal contract.
-- Python owns specialised automation execution.
+- `apps/marketing` owns the public website. It can ship without product login or the Python API.
+- `apps/app` owns the signed-in product UI. It talks to `services/api`. It is not the marketing site.
+- `services/api` owns product HTTP APIs, PostgreSQL writes, agent runs, and every inference call. The product app never sees the provider wire.
+- `packages/ui` owns shared shadcn/ui components used by both Next.js apps.
 - PostgreSQL owns durable business state.
-- Redis transports temporary background work; it is not the source of truth.
+
+These are separate programs in one repo. They share UI primitives, not a deploy or a database connection.
+
+Do not add Redis, object storage, or extra workers until a real feature needs them.
+
+## Monorepo tooling
+
+| Tool | Job |
+|---|---|
+| pnpm | Install JavaScript dependencies and link local packages from each `package.json` |
+| uv | Install Python dependencies for `services/api` |
+| Turborepo (`turbo`) | Run `dev`, `build`, `lint`, and `typecheck` across packages, in dependency order, with cache |
+| shadcn/ui CLI | Add components into `packages/ui`. It does not run the terminal |
+| Turbopack | Next.js bundler inside `next dev` / `next build`. Not the `turbo` CLI |
+
+`pnpm install` fills `node_modules`. `pnpm dev` is `turbo dev`. See [0003](docs/decisions/0003-two-apps-python-backend.md) and [0004](docs/decisions/0004-turborepo-task-runner.md).
 
 ## Technology decisions
 
 | Area | Choice | Status | Responsibility |
 |---|---|---|---|
-| Web UI | Next.js App Router, React, TypeScript | Confirmed | Pages, forms, dashboards, server rendering |
-| Product API | Next.js Route Handlers and Server Actions | Confirmed | Authenticated product operations and browser-facing API |
+| Marketing UI | Next.js App Router, React, TypeScript | Confirmed | Public site, waitlist interface |
+| Product UI | Next.js App Router, React, TypeScript | Confirmed | Signed-in product screens |
+| Product API | Python FastAPI | Confirmed | Authenticated product operations and durable writes |
 | Styling | Tailwind CSS | Confirmed | Responsive styling and design tokens |
-| UI components | shadcn/ui | Proposed | Accessible, reusable interface components when the first interactive form needs them |
-| Primary database | PostgreSQL | Proposed | Users, profiles, jobs, applications, approvals, workflow state |
-| TypeScript database access | Drizzle ORM | Proposed | Schema, migrations, typed queries |
-| Agent orchestration | TypeScript with OpenAI Agents SDK | Confirmed | Agent tools, structured output, guardrails, traces, decisions |
-| Model access | Internal TypeScript model gateway | Confirmed | Normalised generation, streaming, tools, structured output, embeddings, capabilities, and errors |
-| Initial model providers | OpenAI, Ollama, and LM Studio | Confirmed | Cloud and local inference behind the same internal boundary |
-| Background work | Redis and BullMQ | Proposed | Queueing agent workflows, retries, concurrency control |
-| Automation API | Python with FastAPI and Pydantic | Confirmed | Typed boundary around Python automation capabilities |
-| Browser automation | Python Playwright | Proposed | Browser-based actions where an approved integration is unavailable |
-| File storage | S3-compatible object storage | Proposed | Resumes, cover letters, exports, and generated documents |
-| TypeScript validation | Zod | Proposed | Request, configuration, tool-input, and agent-output validation |
+| UI components | shadcn/ui in `packages/ui` | Confirmed | Shared accessible components |
+| Additional UI library | Not selected | Undecided | Add only if shadcn/ui cannot cover a specific need |
+| Primary database | PostgreSQL | Confirmed | Users, profiles, jobs, applications, approvals, workflow state |
+| Python database access | Not selected | Undecided | Schema, migrations, and queries in the API |
+| Agent orchestration | Python with Pydantic AI in `services/api` | Confirmed | Agent tools, structured output, guardrails, decisions |
+| Inference | Vercel AI Gateway, called from Python only | Confirmed | Provider calls for product work and for `services/experiments` checks. See [0005](docs/decisions/0005-python-owns-inference.md) |
+| Product UI wire | FastAPI responses | Confirmed | `apps/app` knows product requests and responses. It does not know model ids, gateway URLs, or provider payloads |
+| Background work | Not selected | Undecided | Queueing only when a workflow cannot finish in a request |
+| File storage | Not selected | Undecided | Resumes and generated documents when needed |
+| TypeScript validation | Zod | Proposed | Browser and Next.js boundary validation |
+| Python validation | Pydantic | Confirmed | API request, response, and agent-output validation |
 | Python testing | pytest | Proposed | Unit and service-contract tests |
 | TypeScript testing | Vitest and Playwright | Proposed | Unit, integration, and end-to-end tests |
-| Package management | pnpm workspaces | Confirmed | Dependency installation and shared scripts across applications and packages |
-| Build orchestration | Turborepo | Proposed | Caching and coordinated builds when multiple packages make it worthwhile |
-| Local infrastructure | Docker Compose | Proposed | PostgreSQL, Redis, and service development |
+| Package management | pnpm workspaces | Confirmed | JavaScript/TypeScript install and per-package dependency lists |
+| Python packaging | uv | Confirmed | API dependencies and lockfile |
+| Task runner | Turborepo | Confirmed | Coordinated `dev` / `build` / `lint` / `typecheck` and cache |
+| Local infrastructure | Docker Compose for PostgreSQL | Confirmed | Local database |
 | Authentication | Provider not selected | Undecided | Identity, sessions, account recovery |
-| Hosting | Providers not selected | Undecided | Web, worker, Python service, database, Redis, and storage |
+| Marketing-site hosting | Vercel | Confirmed | Public product website |
+| Waitlist storage | Supabase or email-list provider | Undecided | Durable early-access signups and research consent |
+| Product hosting | Providers not selected | Undecided | Product web app, API, database, and storage |
 
 ## Component ownership
 
-### `apps/web` — Next.js
+### `apps/marketing` — Next.js
 
 Owns:
 
-- Authentication and authorization at the product boundary
-- Candidate profile, job, application, approval, and settings screens
-- Fast browser-facing requests
-- Creating durable job records before background work is queued
-- Reading workflow status and streaming or polling updates
+- Public product introduction
+- Waitlist and research-invitation UI
+- Marketing-only server rendering
 
 Must not own:
 
-- Long-running agent loops
-- Browser automation
-- In-memory state expected to survive another request
-- Waiting synchronously for human approval
+- Product authentication
+- Agent runs
+- Durable product records that the API should own
 
-### `apps/agent-worker` — TypeScript
+### `apps/app` — Next.js
 
 Owns:
 
-- BullMQ job consumption and retry policy
-- OpenAI Agents SDK configuration
-- Agent tools, structured outputs, guardrails, and tracing
-- Workflow transitions and human-approval checkpoints
-- Calling the Python service through a versioned, validated contract
-- Persisting accepted results and errors to PostgreSQL
+- Signed-in product screens
+- Browser-facing product UI state
+- Calling `services/api` for product operations
+- Showing workflow status and approval decisions
+
+Must not own:
+
+- Direct database writes
+- Inference, model ids, provider URLs, or gateway payloads
+- Long-running agent loops
+- Waiting synchronously for human approval
+
+### `services/api` — Python FastAPI
+
+Owns:
+
+- Product HTTP API, which is the only wire `apps/app` uses
+- PostgreSQL access
+- Pydantic AI agents, tools, structured outputs, and guardrails
+- Calls to Vercel AI Gateway
+- Recording approval decisions and external-action attempts
+- Timeouts and API-level errors
+
+Must not own:
+
+- React UI
+- Unrestricted shell, browser, or external-account access for an agent
 
 The agent receives narrow tools. It does not receive unrestricted database, shell, browser, or external-account access.
 
-### `packages/model-gateway` — TypeScript
+### `packages/ui` — shadcn/ui
 
-Owns all communication with model runtimes. Application and agent code must not construct Ollama, LM Studio, or OpenAI HTTP requests directly.
-
-The internal contract provides:
-
-- `health()` — verify that a configured runtime is reachable
-- `listModels()` — return normalised model identifiers and known capabilities
-- `getCapabilities()` — report support for tools, JSON Schema, vision, reasoning, embeddings, and optional features
-- `generate()` — non-streaming text, structured-output, and tool-call requests
-- `stream()` — normalised streaming events
-- `embed()` — embeddings when the selected model supports them
-
-The gateway contains a provider registry, configuration loader, shared OpenAI-compatible HTTP transport, thin provider adapters, and an OpenAI Agents SDK `ModelProvider` adapter. The Ollama and LM Studio adapters own discovery, capability differences, error mapping, and runtime-specific behaviour.
-
-The first common inference baseline is OpenAI-compatible Chat Completions because both local runtimes support it broadly. The internal contract must not expose that wire format as the product's domain model. Responses can be selected behind an adapter when the required features are available.
-
-A2A Hire owns conversation history rather than depending on provider-side response IDs. This keeps behaviour portable because provider-side state is not equally supported.
-
-Provider URLs, credentials, and model names are server-side configuration. Development defaults are:
-
-- Ollama: `http://127.0.0.1:11434/v1`
-- LM Studio: `http://127.0.0.1:1234/v1`
-
-The gateway returns normalised content, tool calls, finish reason, usage when available, provider, model, latency, and trace metadata. It maps failures into stable categories such as `provider_unavailable`, `model_not_found`, `unsupported_capability`, `rate_limited`, `invalid_response`, `context_limit`, and `generation_failed`.
-
-Feature code requests a logical model purpose such as `job-match` or `application-draft`, not a provider-specific model name. Routing configuration resolves that purpose to a provider and model. Consequential work never silently falls back to another provider or model.
-
-Python automation must not create separate Ollama or LM Studio integrations. If Python later needs inference, expose a small versioned internal HTTP API over the gateway rather than duplicating provider rules.
-
-### `services/automation` — Python
-
-Owns:
-
-- FastAPI endpoints used internally by the TypeScript worker
-- Deterministic document parsing and transformation
-- Browser automation and external-system adapters
-- Pydantic validation, timeouts, and automation-specific errors
-
-Python does not access the product database directly by default. The TypeScript caller supplies the minimum required data and decides what results become durable business state. This prevents two languages from silently developing conflicting database rules.
+Owns shared UI primitives used by both Next.js apps. App-specific screens stay in the app that uses them.
 
 ### PostgreSQL
 
@@ -162,34 +153,28 @@ PostgreSQL is the source of truth. Initial domain concepts are:
 
 These are concepts, not final table definitions. Tables and relationships will be designed alongside the first vertical slices.
 
-### Redis and BullMQ
-
-The queue contains references such as a workflow ID, not complete resumes or unnecessary personal data. Jobs must be safe to retry. A worker crash or duplicate delivery must not cause a duplicate application or outreach message.
-
 ## Core application flow
 
 ```mermaid
 sequenceDiagram
     participant User
-    participant Web as Next.js
+    participant App as Next.js app
+    participant API as FastAPI
     participant DB as PostgreSQL
-    participant Queue as BullMQ
-    participant Agent as TS agent worker
-    participant Python as Python automation
+    participant Gateway as Vercel AI Gateway
 
-    User->>Web: Request application preparation
-    Web->>DB: Create workflow run
-    Web->>Queue: Enqueue workflow ID
-    Web-->>User: Show queued status
-    Queue->>Agent: Deliver work
-    Agent->>DB: Load authorised context
-    Agent->>Python: Request bounded automation
-    Python-->>Agent: Return validated result
-    Agent->>DB: Save proposal and require approval
-    Web-->>User: Show proposal
-    User->>Web: Approve or reject
-    Web->>DB: Record decision
-    Web->>Queue: Enqueue approved continuation
+    User->>App: Request application preparation
+    App->>API: Create workflow
+    API->>DB: Persist workflow run
+    API-->>App: Return queued or in-progress status
+    API->>Gateway: Run bounded inference
+    Gateway-->>API: Model result
+    API-->>API: Validate the result
+    API->>DB: Save proposal and require approval
+    App-->>User: Show proposal
+    User->>App: Approve or reject
+    App->>API: Record decision
+    API->>DB: Persist approval
 ```
 
 Waiting for approval is a database state such as `awaiting_approval`, not a server process left running.
@@ -198,13 +183,11 @@ Waiting for approval is a database state such as `awaiting_approval`, not a serv
 
 Validation happens at every trust boundary:
 
-1. Browser input is validated by the Next.js server.
-2. Database constraints protect durable invariants.
-3. Queue payloads use small, versioned schemas.
-4. Model-gateway configuration, requests, responses, stream events, capabilities, and errors use Zod schemas.
-5. Agent tools and outputs use Zod schemas.
-6. FastAPI requests and responses use Pydantic models.
-7. External data is always treated as untrusted.
+1. Browser input is validated by the Next.js server before it is forwarded.
+2. FastAPI validates requests and responses with Pydantic.
+3. Database constraints protect durable invariants.
+4. Agent tools and outputs use Pydantic models.
+5. External data is always treated as untrusted.
 
 Prefer generated or contract-tested TypeScript/Python interfaces over manually duplicated shapes. The exact OpenAPI or schema-generation workflow will be selected when the first cross-language endpoint is built.
 
@@ -223,18 +206,16 @@ Prefer generated or contract-tested TypeScript/Python interfaces over manually d
 
 ```text
 apps/
-  web/                  Next.js product and browser-facing API
-  agent-worker/         TypeScript queue workers and agent workflows
+  marketing/            Next.js public website
+  app/                  Next.js product UI
 services/
-  automation/           Python FastAPI automation service
+  api/                  FastAPI, Pydantic AI, PostgreSQL access
+  experiments/          Loose Python scripts for gateway and PDF checks
 packages/
-  db/                   Drizzle schema, migrations, and database helpers
-  contracts/            Shared schemas and generated clients
-  agents/               Agent definitions, prompts, tools, and guardrails
-  model-gateway/         Normalised model contract and provider adapters
-  config/                Shared TypeScript configuration
-infra/
-  docker/               Local service configuration
+  ui/                   shadcn/ui components
+  eslint-config/        Shared ESLint config
+  typescript-config/    Shared TypeScript config
+compose.yaml            Local PostgreSQL
 docs/
   decisions/            Architectural decision records when needed
 .learning/              Project-local learning state
@@ -244,19 +225,18 @@ Create directories only when their first real feature needs them. This map is no
 
 ## Build order
 
-1. Bootstrap the monorepo, Next.js application, and shared quality checks.
-2. Build the model-gateway contract, registry, and Ollama/LM Studio health and model-discovery adapters.
-3. Prove one normalised structured generation against both local runtimes with contract tests.
-4. Build and persist a candidate profile.
-5. Capture a job and create an application workspace.
-6. Model application states and approval transitions.
-7. Introduce the queue with one retry-safe background task.
-8. Add one TypeScript agent that uses the gateway and produces validated structured output.
-9. Add the Python service for the first automation that genuinely needs Python.
-10. Connect approval to one carefully bounded external action.
-11. Add production hosting, observability, privacy controls, and cost controls as required.
+1. Build a cinematic, minimalist product introduction and launch website for the confirmed early-career audience.
+2. Select and connect waitlist storage, add the required privacy wording and basic conversion analytics, then deploy the site to Vercel.
+3. Interview and, where practical, manually support early users to test whether the problem and promise are strong enough to justify the functional product.
+4. Use the evidence to confirm or revise the first functional workflow before adding more infrastructure.
+5. Build and persist a candidate profile.
+6. Capture a job and create an application workspace.
+7. Model application states and approval transitions.
+8. Add one agent inside `services/api`. The API calls Vercel AI Gateway and returns a normal FastAPI response. `apps/app` does not learn the provider format.
+9. Connect approval to one carefully bounded external action.
+10. Add product hosting, observability, privacy controls, and cost controls as required.
 
-The gateway is early because every model-backed feature depends on its boundary. Redis, autonomous workflows, and Python automation still wait until a normal application flow exists to support them.
+The monorepo exists so later slices have a place to land. New product infrastructure still pauses until website evidence sharpens the first functional workflow.
 
 ## Decision rules
 
@@ -264,19 +244,23 @@ The gateway is early because every model-backed feature depends on its boundary.
 - Introduce a dependency because it owns a clear responsibility, not because it is fashionable.
 - Keep business rules out of React components and agent prompts when deterministic code can enforce them.
 - Treat model output as untrusted input that must be validated and authorised.
-- Depend on capabilities explicitly; an OpenAI-compatible URL does not guarantee identical behaviour.
-- Do not bypass `packages/model-gateway` to access a model provider.
+- Next.js apps call `services/api` and nothing behind it. Inference and provider wire formats stay in Python. See [0005](docs/decisions/0005-python-owns-inference.md).
+- Do not treat `apps/marketing` and `apps/app` as one UI. Marketing stays public and deployable alone.
 - Write down significant reversals in `docs/decisions/` and update this map in the same change.
 - If implementation and this document disagree, stop and resolve the inconsistency rather than allowing two architectures to coexist accidentally.
 
 ## Open decisions
 
+- Waitlist storage provider and its data-retention policy
 - Authentication provider
+- Python database library and migration tool
+- Whether a second UI library is needed
 - Hosting providers and regional data location
-- S3-compatible storage provider
+- Object storage provider
 - Email and calendar integrations
 - Job-source integrations and their permitted automation methods
 - Production monitoring and error-reporting provider
 - Data retention and deletion policy
 - Logical model purposes, selection policy, and permitted fallback rules
-- Whether and when the gateway needs an internal HTTP surface for Python callers
+- How Pydantic AI in `services/api` calls Vercel AI Gateway once a check leaves `services/experiments`
+- Background queue only if request/response work is no longer enough

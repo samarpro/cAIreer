@@ -1,29 +1,21 @@
 # Learning profile
 
 ## Preferences
-
 - Default mode: Guided shipping
-- Goal: Learn as many transferable engineering concepts as practical while building the product
-- Explanation style: Plain language first, then precise terminology
-- Participation: Meaningful decisions and small implementations, not repetitive boilerplate
-- Feedback style: Specific and direct; not yet otherwise assessed
-- Learning-system ownership: Codex maintains and improves the skill, roadmap, exercises, and learning records; the owner focuses on learning and building
+- Explanation style: Plain language, then precise terminology
+- Feedback style: Unknown until stated
 
 ## Capability map
 
 | Area | Confidence | Evidence | Next edge |
 |---|---|---|---|
-| TypeScript | Introduced | Interest stated; practical depth not assessed | Types, functions, objects, and runtime validation |
-| React and Next.js | Introduced | Selected for this project; practical depth not assessed | Server/client boundaries and request flow |
-| Python | Introduced | Selected for automation; practical depth not assessed | Typed service functions and automation boundaries |
-| Databases | Introduced | No demonstrated evidence yet | Tables, relationships, constraints, and migrations |
-| APIs | Introduced | No demonstrated evidence yet | HTTP requests, validation, errors, and contracts |
-| Testing and debugging | Introduced | No demonstrated evidence yet | Arrange-act-assert and reading failures as evidence |
-| Async jobs and queues | Introduced | No demonstrated evidence yet | Why work leaves an HTTP request and how retries behave |
-| Agents and automation | Introduced | Product intent is clear; implementation depth not assessed | Tools, structured outputs, guardrails, and approval gates |
-| Security and privacy | Introduced | Human control is a stated product value | Authentication, authorization, secrets, and personal data |
-| Git and delivery | Introduced | Repository exists; practical depth not assessed | Small commits, CI, environments, and deployment |
+| TypeScript | Introduced | Not assessed | Read a Next.js app package and name what it owns |
+| Next.js | Introduced | Not assessed | Explain why marketing and app are separate apps |
+| Python | Introduced | Not assessed | Point to the FastAPI health route and say what should not live there yet |
+| Databases | Introduced | Not assessed | Explain why Postgres is the source of truth |
+| Testing/debugging | Introduced | Not assessed | Run a turbo task and interpret a cache hit vs miss |
+| Agents/automation | Introduced | Not assessed | Explain why Pydantic AI belongs in the Python service |
 
 ## Misconceptions to revisit
 
-- None recorded. Avoid inferring misconceptions from beginner status.
+- None recorded.

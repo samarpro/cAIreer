@@ -1,31 +1,21 @@
 # Learning mission
 
 ## Product outcome
-
-Build A2A Hire: a trustworthy job-search assistant that reduces repetitive application work while keeping job seekers in control of how they are represented and requiring human approval for consequential actions.
+cAIreer helps ambitious students and early-career professionals use AI in their job search without losing control of how they are represented. The first public slice is a marketing site. The functional product comes after demand evidence.
 
 ## Learning outcome
-
-Learn to design, build, test, debug, and deploy a real full-stack product using Next.js and TypeScript, a PostgreSQL-backed application, TypeScript agent orchestration, and Python automation. Develop enough engineering judgment to understand what AI-generated code does, identify unsafe shortcuts, and make architectural decisions independently.
+Sam wants to design, implement, debug, and explain the system without depending entirely on AI. The current edge is the monorepo: which package owns UI, HTTP APIs, data, and agents.
 
 ## Success evidence
-
-- A job seeker can complete a useful end-to-end workflow through a deployed product.
-- The owner can trace data through the browser, API, database, queue, agent, and automation layers.
-- The owner can implement and test small features without handing the entire task to an agent.
-- The owner can explain important tradeoffs involving security, reliability, privacy, and cost.
-- The owner can diagnose common failures using types, tests, logs, and runtime evidence.
+- Two Next.js apps and a Python API run from one repo
+- Sam can explain why marketing, the product app, and the API are separate packages
+- Sam can later add a feature by choosing the right package instead of dumping everything into one app
 
 ## Constraints
-
-- The owner is not yet a seasoned developer and is learning through this project.
-- Product progress and learning are both requirements.
-- TypeScript is preferred for the web application and agent orchestration.
-- Python is required for automation work.
-- Explanations should start in plain language and introduce precise terminology gradually.
+- Sam is learning software engineering while building the product
+- Guided shipping: keep product progress moving, teach one concept per slice
+- Do not build unused infrastructure
 
 ## Current assumptions
-
-- Guided shipping is the default: Codex implements coherent slices while reserving meaningful reasoning and practice for the owner.
-- The first release should serve job seekers before attempting employer-side agent negotiation.
-- Understanding a smaller working system is more valuable than introducing every possible infrastructure tool immediately.
+- Sam prefers working in code over long lectures
+- Default teaching mode is Guided shipping unless Sam asks otherwise
