@@ -9,7 +9,7 @@ import tracemalloc
 from pathlib import Path
 from typing import Any
 
-from resume_eval.baseline import parse_pdf
+from resume_eval.parser import parse_pdf
 from resume_eval.metrics import evaluate_nodes
 from resume_eval.schema import ResumeNode
 
@@ -47,7 +47,7 @@ def evaluate_case(case_path: Path, repo: Path) -> dict[str, Any]:
     return {
         "case_id": case["case_id"],
         "permission": case["permission"],
-        "candidate": "pypdf-estimated-lines",
+        "candidate": "pymupdf-spans",
         "code_revision": git_revision(repo),
         "runtime": {
             "python": platform.python_version(),
