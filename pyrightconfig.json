@@ -1,0 +1,7 @@
+{
+  "venvPath": "evals/resume",
+  "venv": ".venv",
+  "pythonVersion": "3.13",
+  "include": ["evals/resume/src", "evals/resume/tests"],
+  "extraPaths": ["evals/resume/src"]
+}

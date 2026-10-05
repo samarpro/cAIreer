@@ -1,266 +1,169 @@
-# cAIreer Technology Map
+# cAIreer technology map
 
-This document is the shared technical reference for cAIreer. Read it before making architectural or dependency decisions. Update it when a decision changes.
+This is the shared technical reference for cAIreer. Read it before making architecture, dependency, service-boundary, or deployment decisions. Keep it aligned with the repository.
 
-## Status legend
+## Current stage
 
-- **Confirmed**: explicitly chosen for the project.
-- **Proposed**: the current default unless implementation evidence suggests a better choice.
-- **Undecided**: do not silently choose; record the decision here when it becomes necessary.
+cAIreer is in capability evaluation, not product integration.
 
-## Product boundary
+The first capability under evaluation is spatial resume parsing. A useful result must preserve enough text, reading order, structure, and page geometry for a user to select a visible resume region and request a focused change.
 
-The initial validation release is a cinematic public launch website for ambitious students and early-career professionals who already use AI in their job search. It introduces cAIreer's worldview and product promise to the market, explains the intended experience, captures early-access interest, and recruits potential research participants before further product infrastructure is built.
+Browser use follows resume evaluation. Candidate approaches will be compared on the same navigation and extraction tasks before a framework or model becomes part of the product.
 
-The first functional product release serves job seekers. It helps them discover and evaluate jobs, prepare tailored application material, and automate repetitive steps while keeping them in control of how they are represented.
+`apps/app` and `services/api` remain thin shells until a capability has a written evaluation contract and meets its acceptance thresholds. The marketing site continues independently.
 
-Applying, sending outreach, or performing another consequential external action always requires an explicit human approval record.
-
-Employer-side agents negotiating directly with candidate agents are a later product stage, not an MVP dependency.
-
-## System map
-
-```mermaid
-flowchart LR
-    U["Job seeker"] --> M["apps/marketing Next.js"]
-    U --> A["apps/app Next.js"]
-    A --> API["services/api FastAPI"]
-    API --> DB["PostgreSQL"]
-    API --> GW["Vercel AI Gateway"]
-```
-
-The central idea is **separation of responsibilities**:
-
-- `apps/marketing` owns the public website. It can ship without product login or the Python API.
-- `apps/app` owns the signed-in product UI. It talks to `services/api`. It is not the marketing site.
-- `services/api` owns product HTTP APIs, PostgreSQL writes, agent runs, and every inference call. The product app never sees the provider wire.
-- `packages/ui` owns shared shadcn/ui components used by both Next.js apps.
-- PostgreSQL owns durable business state.
-
-These are separate programs in one repo. They share UI primitives, not a deploy or a database connection.
-
-Do not add Redis, object storage, or extra workers until a real feature needs them.
-
-## Monorepo tooling
-
-| Tool | Job |
-|---|---|
-| pnpm | Install JavaScript dependencies and link local packages from each `package.json` |
-| uv | Install Python dependencies for `services/api` |
-| Turborepo (`turbo`) | Run `dev`, `build`, `lint`, and `typecheck` across packages, in dependency order, with cache |
-| shadcn/ui CLI | Add components into `packages/ui`. It does not run the terminal |
-| Turbopack | Next.js bundler inside `next dev` / `next build`. Not the `turbo` CLI |
-
-`pnpm install` fills `node_modules`. `pnpm dev` is `turbo dev`. See [0003](docs/decisions/0003-two-apps-python-backend.md) and [0004](docs/decisions/0004-turborepo-task-runner.md).
-
-## Technology decisions
-
-| Area | Choice | Status | Responsibility |
-|---|---|---|---|
-| Marketing UI | Next.js App Router, React, TypeScript | Confirmed | Public site, waitlist interface |
-| Product UI | Next.js App Router, React, TypeScript | Confirmed | Signed-in product screens |
-| Product API | Python FastAPI | Confirmed | Authenticated product operations and durable writes |
-| Styling | Tailwind CSS | Confirmed | Responsive styling and design tokens |
-| UI components | shadcn/ui in `packages/ui` | Confirmed | Shared accessible components |
-| Additional UI library | Not selected | Undecided | Add only if shadcn/ui cannot cover a specific need |
-| Primary database | PostgreSQL | Confirmed | Users, profiles, jobs, applications, approvals, workflow state |
-| Python database access | Not selected | Undecided | Schema, migrations, and queries in the API |
-| Agent orchestration | Python with Pydantic AI in `services/api` | Confirmed | Agent tools, structured output, guardrails, decisions |
-| Inference | Vercel AI Gateway, called from Python only | Confirmed | Provider calls for product work and for `services/experiments` checks. See [0005](docs/decisions/0005-python-owns-inference.md) |
-| Product UI wire | FastAPI responses | Confirmed | `apps/app` knows product requests and responses. It does not know model ids, gateway URLs, or provider payloads |
-| Background work | Not selected | Undecided | Queueing only when a workflow cannot finish in a request |
-| File storage | Not selected | Undecided | Resumes and generated documents when needed |
-| TypeScript validation | Zod | Proposed | Browser and Next.js boundary validation |
-| Python validation | Pydantic | Confirmed | API request, response, and agent-output validation |
-| Python testing | pytest | Proposed | Unit and service-contract tests |
-| TypeScript testing | Vitest and Playwright | Proposed | Unit, integration, and end-to-end tests |
-| Package management | pnpm workspaces | Confirmed | JavaScript/TypeScript install and per-package dependency lists |
-| Python packaging | uv | Confirmed | API dependencies and lockfile |
-| Task runner | Turborepo | Confirmed | Coordinated `dev` / `build` / `lint` / `typecheck` and cache |
-| Local infrastructure | Docker Compose for PostgreSQL | Confirmed | Local database |
-| Authentication | Provider not selected | Undecided | Identity, sessions, account recovery |
-| Marketing-site hosting | Vercel | Confirmed | Public product website |
-| Waitlist storage | Supabase or email-list provider | Undecided | Durable early-access signups and research consent |
-| Product hosting | Providers not selected | Undecided | Product web app, API, database, and storage |
-
-## Component ownership
-
-### `apps/marketing` — Next.js
-
-Owns:
-
-- Public product introduction
-- Waitlist and research-invitation UI
-- Marketing-only server rendering
-
-Must not own:
-
-- Product authentication
-- Agent runs
-- Durable product records that the API should own
-
-### `apps/app` — Next.js
-
-Owns:
-
-- Signed-in product screens
-- Browser-facing product UI state
-- Calling `services/api` for product operations
-- Showing workflow status and approval decisions
-
-Must not own:
-
-- Direct database writes
-- Inference, model ids, provider URLs, or gateway payloads
-- Long-running agent loops
-- Waiting synchronously for human approval
-
-### `services/api` — Python FastAPI
-
-Owns:
-
-- Product HTTP API, which is the only wire `apps/app` uses
-- PostgreSQL access
-- Pydantic AI agents, tools, structured outputs, and guardrails
-- Calls to Vercel AI Gateway
-- Recording approval decisions and external-action attempts
-- Timeouts and API-level errors
-
-Must not own:
-
-- React UI
-- Unrestricted shell, browser, or external-account access for an agent
-
-The agent receives narrow tools. It does not receive unrestricted database, shell, browser, or external-account access.
-
-### `packages/ui` — shadcn/ui
-
-Owns shared UI primitives used by both Next.js apps. App-specific screens stay in the app that uses them.
-
-### PostgreSQL
-
-PostgreSQL is the source of truth. Initial domain concepts are:
-
-- `User`
-- `CandidateProfile`
-- `Experience`
-- `Job`
-- `Application`
-- `ApplicationArtifact`
-- `Approval`
-- `WorkflowRun`
-- `ExternalAction`
-
-These are concepts, not final table definitions. Tables and relationships will be designed alongside the first vertical slices.
-
-## Core application flow
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant App as Next.js app
-    participant API as FastAPI
-    participant DB as PostgreSQL
-    participant Gateway as Vercel AI Gateway
-
-    User->>App: Request application preparation
-    App->>API: Create workflow
-    API->>DB: Persist workflow run
-    API-->>App: Return queued or in-progress status
-    API->>Gateway: Run bounded inference
-    Gateway-->>API: Model result
-    API-->>API: Validate the result
-    API->>DB: Save proposal and require approval
-    App-->>User: Show proposal
-    User->>App: Approve or reject
-    App->>API: Record decision
-    API->>DB: Persist approval
-```
-
-Waiting for approval is a database state such as `awaiting_approval`, not a server process left running.
-
-## Contracts and validation
-
-Validation happens at every trust boundary:
-
-1. Browser input is validated by the Next.js server before it is forwarded.
-2. FastAPI validates requests and responses with Pydantic.
-3. Database constraints protect durable invariants.
-4. Agent tools and outputs use Pydantic models.
-5. External data is always treated as untrusted.
-
-Prefer generated or contract-tested TypeScript/Python interfaces over manually duplicated shapes. The exact OpenAPI or schema-generation workflow will be selected when the first cross-language endpoint is built.
-
-## Security and privacy invariants
-
-- Never submit an application, contact a person, or publish content without explicit recorded approval.
-- Check authorization on the server; hiding a UI control is not authorization.
-- Keep provider keys and credentials out of browser bundles, logs, prompts, and Git.
-- Accept provider base URLs only from trusted server-side configuration; never proxy an arbitrary user-supplied URL.
-- Send agents and automation only the personal data required for the current operation.
-- Keep an audit trail of proposed, approved, attempted, succeeded, and failed external actions.
-- Redact sensitive candidate data from routine logs and traces.
-- Prefer official APIs over browser automation when a suitable API exists and its terms permit the use case.
-
-## Expected repository structure
+## Repository map
 
 ```text
 apps/
-  marketing/            Next.js public website
-  app/                  Next.js product UI
+  marketing/        public website
+  app/              product shell, no experimental capability code
+evals/
+  resume/           resume fixtures, parser baselines, scoring, and run reports
+  browser/          browser task contract, fixtures, and later model comparisons
 services/
-  api/                  FastAPI, Pydantic AI, PostgreSQL access
-  experiments/          Loose Python scripts for gateway and PDF checks
+  api/              product API shell; receives capabilities only after evaluation
 packages/
-  ui/                   shadcn/ui components
-  eslint-config/        Shared ESLint config
-  typescript-config/    Shared TypeScript config
-compose.yaml            Local PostgreSQL
+  ui/               shared React components
+  eslint-config/    shared lint rules
+  typescript-config/shared TypeScript settings
 docs/
-  decisions/            Architectural decision records when needed
-.learning/              Project-local learning state
+  decisions/        architecture decision records
+  product/          product behavior and interaction contracts
 ```
 
-Create directories only when their first real feature needs them. This map is not permission to scaffold unused infrastructure.
+The rule is simple: uncertain work begins in `evals`. Proven product behavior moves into `services/api` or `apps/app`.
+
+## System boundaries
+
+### `apps/marketing`
+
+Owns the public product story, waitlist, and research invitations. It must not depend on the product API or evaluation code.
+
+### `apps/app`
+
+Will own the signed-in product interface. During evaluation it stays a shell. Thin internal viewers may be added only when they are needed to inspect resume regions or browser traces. Those viewers are test instruments, not finished product screens.
+
+### `evals/resume`
+
+Owns:
+
+- consented, synthetic, or public resume fixtures;
+- manually reviewed expected annotations;
+- parser adapters and model experiments;
+- quality scores;
+- latency, hosted cost, CPU, and memory measurements;
+- saved run reports that do not contain private resume content.
+
+Private resumes belong in ignored `fixtures/private` directories. Do not commit personal resumes by default.
+
+### `evals/browser`
+
+Will own repeatable job-site navigation and extraction tasks. It will compare deterministic DOM or accessibility-tree logic, small local models, hosted models, and visual fallbacks.
+
+Navigation and job extraction may share page perception. Their permissions differ. Extraction is read-only. Submit, send, and post remain consequential actions that require explicit human approval when product integration begins.
+
+### `services/api`
+
+Will own authenticated product operations, durable state, model calls, and approval enforcement. It is currently a health-check shell. Evaluation scripts may call model providers directly through trusted server-side configuration, but browser code and Next.js code may not.
+
+## Resume document contract
+
+A parser candidate should return stable document nodes with these fields:
+
+```text
+node_id
+page_number
+kind
+text
+bounding_box: x, y, width, height
+reading_order
+style
+parent_node_id
+confidence
+```
+
+The original PDF stays immutable. A user edit targets one or more stable node IDs and creates a revision. The system must show a visual diff before accepting the revision. A focused edit must not silently rewrite unrelated nodes.
+
+The current resume eval uses PyMuPDF coordinates: points measured from the top left of each page. Its visual annotation PDF is a separate output in `evals/resume/results`.
+
+The current parser merges spans whose box tops are within 5 points of a row's topmost span, joining text left to right and retaining source fragments and font styles in the merged node. This row heuristic can combine separate columns or fields at the same height and remains under evaluation.
+
+Pixel-perfect editing of arbitrary PDF internals is not assumed. The evaluation will determine whether the product preserves the uploaded design, regenerates an editable document, or supports both with stated limits.
+
+The intended interaction is to preview a meaningful region on hover or keyboard focus, select it on click, then allow direct PDF editing alongside a compact AI chat. Region grouping is evaluated before interaction so hover stays immediate. An existing PDF editor will be trialled for rendering, direct text editing, and export; no viewer or editor SDK is selected yet. Jev is a candidate for bounded grouping and region-label decisions, not for generating replacement text.
+
+## Evidence required before integration
+
+### Deterministic tests
+
+Tests protect rules with a correct or incorrect answer, such as schema validation, metric calculations, approval checks, and output serialization.
+
+### Quality evals
+
+Resume evals measure:
+
+- text recovery;
+- reading order;
+- spatial overlap;
+- structural labels;
+- edit locality;
+- rendered output defects.
+
+Browser evals will measure task completion, wrong actions, recovery, and forbidden-action attempts.
+
+### Benchmarks
+
+Every candidate run should capture wall time, CPU time, peak memory, model and provider, token or request usage when available, and hosted cost when known. Compare median and slow runs, not only the best run.
+
+## Confirmed technology choices
+
+| Area | Choice | Status |
+|---|---|---|
+| Marketing UI | Next.js App Router, React, TypeScript | Confirmed |
+| Product UI | Next.js App Router, React, TypeScript | Confirmed |
+| Product API | Python FastAPI | Confirmed |
+| Shared UI | shadcn/ui in `packages/ui` | Confirmed |
+| Task runner | Turborepo with pnpm workspaces | Confirmed |
+| Python packaging | uv | Confirmed |
+| Resume eval node models | Pydantic v2 in `evals/resume` | Confirmed |
+| Product inference boundary | Python only, through Vercel AI Gateway | Confirmed |
+| Resume parser | PyMuPDF | Selected for resume evaluation and planned product parsing; quality gate remains open |
+| Editable resume format | Selected after fidelity and editability evaluation | Undecided |
+| Browser framework | Selected by benchmark | Undecided |
+| Browser models | JEV, local small models, and other candidates may be evaluated | Undecided |
+| Product database and auth | Add when a proven workflow needs persistence | Deferred |
 
 ## Build order
 
-1. Build a cinematic, minimalist product introduction and launch website for the confirmed early-career audience.
-2. Select and connect waitlist storage, add the required privacy wording and basic conversion analytics, then deploy the site to Vercel.
-3. Interview and, where practical, manually support early users to test whether the problem and promise are strong enough to justify the functional product.
-4. Use the evidence to confirm or revise the first functional workflow before adding more infrastructure.
-5. Build and persist a candidate profile.
-6. Capture a job and create an application workspace.
-7. Model application states and approval transitions.
-8. Add one agent inside `services/api`. The API calls Vercel AI Gateway and returns a normal FastAPI response. `apps/app` does not learn the provider format.
-9. Connect approval to one carefully bounded external action.
-10. Add product hosting, observability, privacy controls, and cost controls as required.
-
-The monorepo exists so later slices have a place to land. New product infrastructure still pauses until website evidence sharpens the first functional workflow.
+1. Define the resume corpus, ground-truth format, metrics, and resource report.
+2. Run the PyMuPDF span parser on the labelled corpus and record its quality and resource use.
+3. Confirm PyMuPDF meets the written quality and resource thresholds.
+4. Build a thin resume-region viewer only when visual inspection becomes the evaluation bottleneck.
+5. Test selection, focused chat patches, visual diffs, and revision stability.
+6. Define browser tasks and safety invariants.
+7. Benchmark deterministic, local-model, hosted-model, and visual browser paths.
+8. Integrate only the passing resume and browser capabilities into `services/api` and `apps/app`.
+9. Add persistence, identity, approvals, deployment, and monitoring when the integrated workflow requires them.
 
 ## Decision rules
 
-- Prefer the smallest architecture that supports the next vertical slice.
-- Introduce a dependency because it owns a clear responsibility, not because it is fashionable.
-- Keep business rules out of React components and agent prompts when deterministic code can enforce them.
-- Treat model output as untrusted input that must be validated and authorised.
-- Next.js apps call `services/api` and nothing behind it. Inference and provider wire formats stay in Python. See [0005](docs/decisions/0005-python-owns-inference.md).
-- Do not treat `apps/marketing` and `apps/app` as one UI. Marketing stays public and deployable alone.
-- Write down significant reversals in `docs/decisions/` and update this map in the same change.
-- If implementation and this document disagree, stop and resolve the inconsistency rather than allowing two architectures to coexist accidentally.
+- A benchmark result must name its input corpus, code revision, model, runtime, and hardware context.
+- Do not optimize against one personal resume or one job site.
+- Keep raw private documents and page captures out of Git and routine logs.
+- A low-cost model is useful only if it meets the quality and safety threshold.
+- The browser never receives provider keys or unrestricted model-written scripts.
+- Consequential external actions require a visible proposal and explicit approval.
+- Do not create databases, migrations, auth flows, queues, or polished screens before the evaluated workflow needs them.
 
 ## Open decisions
 
-- Waitlist storage provider and its data-retention policy
-- Authentication provider
-- Python database library and migration tool
-- Whether a second UI library is needed
-- Hosting providers and regional data location
-- Object storage provider
-- Email and calendar integrations
-- Job-source integrations and their permitted automation methods
-- Production monitoring and error-reporting provider
-- Data retention and deletion policy
-- Logical model purposes, selection policy, and permitted fallback rules
-- How Pydantic AI in `services/api` calls Vercel AI Gateway once a check leaves `services/experiments`
-- Background queue only if request/response work is no longer enough
+- Resume corpus licensing and consent process
+- Minimum passing scores for extraction, geometry, and edit locality
+- Whether edited resumes preserve the original PDF design or use a regenerated format
+- Which PDF editor SDK can support direct editing, region overlays, export, and focused diffs within acceptable licensing and privacy constraints
+- Whether deterministic grouping is sufficient or Jev improves ambiguous region boundaries on a labelled corpus
+- Whether PyMuPDF meets the resume quality and resource thresholds on the labelled corpus
+- Browser benchmark sites and permitted automation methods
+- Local model runtime and supported hardware floor
+- Production database, authentication, hosting, and retention policy

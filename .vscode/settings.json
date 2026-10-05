@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/evals/resume/.venv/bin/python",
+  // "python.analysis.extraPaths": ["${workspaceFolder}/evals/resume/src"]
+}

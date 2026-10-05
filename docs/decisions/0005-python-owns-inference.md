@@ -16,7 +16,7 @@ Product requests from the signed-in app always need the same checks: auth, valid
 
 `apps/app` sends product requests to FastAPI and renders the responses. It does not receive model ids, provider URLs, gateway payloads, or provider keys. `apps/marketing` does not call inference at all.
 
-`services/experiments` may call the gateway while a check is still a loose script. A check that becomes a product feature moves into `services/api`. It does not grow a TypeScript client.
+`evals` may call the gateway while a capability is being measured. A capability that meets its acceptance thresholds can move into `services/api`. It does not grow a TypeScript client.
 
 ## Consequences
 

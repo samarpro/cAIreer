@@ -6,8 +6,13 @@ export default function Page() {
       <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
         <div>
           <h1 className="font-medium">cAIreer app</h1>
-          <p>Product application. No product features yet.</p>
-          <Button className="mt-2">Button</Button>
+          <p>
+            Product integration is paused while resume and browser evaluations are
+            built and measured.
+          </p>
+          <Button className="mt-2" disabled>
+            Evaluation in progress
+          </Button>
         </div>
       </div>
     </div>
