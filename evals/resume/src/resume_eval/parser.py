@@ -1,10 +1,13 @@
 from __future__ import annotations
 
+from hashlib import sha256
 from pathlib import Path
 
 import pymupdf
 
 from resume_eval.schema import BoundingBox, ResumeNode
+
+LINE_Y_TOLERANCE = 5.0
 
 ANNOTATION_COLORS = (
     (1.0, 0.23, 0.19),
@@ -13,6 +16,53 @@ ANNOTATION_COLORS = (
     (1.0, 0.58, 0.0),
     (0.69, 0.32, 0.87),
 )
+
+
+def merge_fragments(
+    nodes: list[ResumeNode], y_tolerance: float = LINE_Y_TOLERANCE
+) -> list[ResumeNode]:
+    rows: list[list[ResumeNode]] = []
+    row: list[ResumeNode] = []
+    for node in sorted(nodes, key=lambda item: (item.page_number, item.bounding_box.y)):
+        if row and (
+            node.page_number != row[0].page_number
+            or node.bounding_box.y - row[0].bounding_box.y > y_tolerance
+        ):
+            rows.append(sorted(row, key=lambda item: item.bounding_box.x))
+            row = []
+        row.append(node)
+    if row:
+        rows.append(sorted(row, key=lambda item: item.bounding_box.x))
+
+    merged: list[ResumeNode] = []
+    for reading_order, row in enumerate(rows):
+        first = row[0]
+        if len(row) == 1:
+            merged.append(first.model_copy(update={"reading_order": reading_order}))
+            continue
+        x0 = min(node.bounding_box.x for node in row)
+        y0 = min(node.bounding_box.y for node in row)
+        x1 = max(node.bounding_box.x + node.bounding_box.width for node in row)
+        y1 = max(node.bounding_box.y + node.bounding_box.height for node in row)
+        source_ids = "\0".join(node.node_id for node in row)
+        # Keep only shared style values; source fragments retain mixed font details.
+        style = {
+            key: value for key, value in first.style.items()
+            if all(node.style.get(key) == value for node in row)
+        }
+        style.update({
+            "geometry_method": "union_of_span_boxes",
+            "source_fragments": [node.model_dump() for node in row],
+        })
+        merged.append(first.model_copy(update={
+            "node_id": f"page-{first.page_number}-row-{sha256(source_ids.encode()).hexdigest()[:12]}",
+            "text": " ".join(node.text.strip() for node in row),
+            "bounding_box": BoundingBox(x=x0, y=y0, width=x1 - x0, height=y1 - y0),
+            "reading_order": reading_order,
+            "style": style,
+            "confidence": min(node.confidence for node in row),
+        }))
+    return merged
 
 
 def draw_reading_order_label(
@@ -49,7 +99,6 @@ def parse_pdf(path: Path) -> list[ResumeNode]:
     nodes: list[ResumeNode] = []
     with pymupdf.open(path) as document:
         for page_number, page in enumerate(document, start=1):
-            # Keep the document's extraction order so the eval can measure its quality.
             for block in page.get_text("dict")["blocks"]:
                 if block["type"] != 0:
                     continue
@@ -82,6 +131,7 @@ def parse_pdf(path: Path) -> list[ResumeNode]:
                             )
                         )
 
+    nodes = merge_fragments(nodes)
     annotate_pdf(path, nodes)
     return nodes
 
@@ -100,7 +150,7 @@ def annotate_pdf(
             ]
             use_gutter = bool(visible_nodes) and min(node.bounding_box.x for node in visible_nodes) >= 32
             previous_badge_bottom = -1.0
-            for node in sorted(visible_nodes, key=lambda item: (item.bounding_box.y, item.bounding_box.x)):
+            for node in sorted(visible_nodes, key=lambda item: item.reading_order):
                 box = node.bounding_box
                 rect = pymupdf.Rect(box.x, box.y, box.x + box.width, box.y + box.height)
                 color = ANNOTATION_COLORS[node.reading_order % len(ANNOTATION_COLORS)]

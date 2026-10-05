@@ -47,7 +47,7 @@ def evaluate_case(case_path: Path, repo: Path) -> dict[str, Any]:
     return {
         "case_id": case["case_id"],
         "permission": case["permission"],
-        "candidate": "pymupdf-spans",
+        "candidate": "pymupdf-merged-y-rows",
         "code_revision": git_revision(repo),
         "runtime": {
             "python": platform.python_version(),
