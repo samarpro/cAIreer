@@ -1,0 +1,1898 @@
+{
+  "case_id": "sujal-joshi-resume-01",
+  "pdf": "001-Sujal Joshi.pdf",
+  "permission": "user-provided for local evaluation; redistribution rights unconfirmed",
+  "origin": "PDF provided in the project workspace; metadata identifies Sujal Joshi as author.",
+  "nodes": [
+    {
+      "node_id": "page-1-line-000",
+      "page_number": 1,
+      "kind": "name",
+      "text": "Sujal Joshi",
+      "bounding_box": {
+        "x": 277.85,
+        "y": 39.73,
+        "width": 58.32,
+        "height": 12.16
+      },
+      "reading_order": 0,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-001",
+      "page_number": 1,
+      "kind": "contact",
+      "text": "Tel: 0421919526",
+      "bounding_box": {
+        "x": 264.41,
+        "y": 51.85,
+        "width": 85.32,
+        "height": 12.16
+      },
+      "reading_order": 1,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-002",
+      "page_number": 1,
+      "kind": "contact",
+      "text": "Email: sujaljoshi77@gmail.com",
+      "bounding_box": {
+        "x": 237.17,
+        "y": 64.09,
+        "width": 139.8,
+        "height": 12.16
+      },
+      "reading_order": 2,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-003",
+      "page_number": 1,
+      "kind": "contact",
+      "text": "LinkedIn: www.linkedin.com/in/sujal-joshi-bubblegumbo/",
+      "bounding_box": {
+        "x": 180.14,
+        "y": 76.35,
+        "width": 255.75,
+        "height": 12.16
+      },
+      "reading_order": 3,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-004",
+      "page_number": 1,
+      "kind": "contact",
+      "text": "GitHub: https://github.com/Bubblegumb",
+      "bounding_box": {
+        "x": 217.25,
+        "y": 88.59,
+        "width": 181.68,
+        "height": 12.16
+      },
+      "reading_order": 4,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-005",
+      "page_number": 1,
+      "kind": "contact",
+      "text": "Portfolio: https://bubblegumbo.dev/",
+      "bounding_box": {
+        "x": 226.61,
+        "y": 100.71,
+        "width": 162.72,
+        "height": 12.16
+      },
+      "reading_order": 5,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-006",
+      "page_number": 1,
+      "kind": "section_heading",
+      "text": "Career Profile",
+      "bounding_box": {
+        "x": 267.41,
+        "y": 128.31,
+        "width": 79.2,
+        "height": 12.16
+      },
+      "reading_order": 6,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-007",
+      "page_number": 1,
+      "kind": "summary",
+      "text": "Cloud Native Application Development graduate from Deakin University with a strong foundation in full-stack engineering,",
+      "bounding_box": {
+        "x": 43.2,
+        "y": 154.83,
+        "width": 523.91,
+        "height": 12.16
+      },
+      "reading_order": 7,
+      "parent_node_id": "page-1-line-006",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-008",
+      "page_number": 1,
+      "kind": "summary",
+      "text": "DevOps pipelines, and UI/UX prototyping. Proven capability in guiding cross-functional technical teams, constructing",
+      "bounding_box": {
+        "x": 43.2,
+        "y": 168.27,
+        "width": 504.08,
+        "height": 12.16
+      },
+      "reading_order": 8,
+      "parent_node_id": "page-1-line-006",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-009",
+      "page_number": 1,
+      "kind": "summary",
+      "text": "scalable database architectures, and managing high-pressure operational environments. Combines deep technical",
+      "bounding_box": {
+        "x": 43.2,
+        "y": 181.71,
+        "width": 497.25,
+        "height": 12.16
+      },
+      "reading_order": 9,
+      "parent_node_id": "page-1-line-006",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-010",
+      "page_number": 1,
+      "kind": "summary",
+      "text": "fluency in containerized environments with an agile, client-focused mindset to deliver production-ready digital solutions.",
+      "bounding_box": {
+        "x": 43.2,
+        "y": 195.15,
+        "width": 519.2,
+        "height": 12.16
+      },
+      "reading_order": 10,
+      "parent_node_id": "page-1-line-006",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-011",
+      "page_number": 1,
+      "kind": "section_heading",
+      "text": "Education",
+      "bounding_box": {
+        "x": 278.45,
+        "y": 237.18,
+        "width": 57.24,
+        "height": 12.16
+      },
+      "reading_order": 11,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-012",
+      "page_number": 1,
+      "kind": "education",
+      "text": "July 2024 – July 2026",
+      "bounding_box": {
+        "x": 43.2,
+        "y": 265.62,
+        "width": 92.28,
+        "height": 12.16
+      },
+      "reading_order": 12,
+      "parent_node_id": "page-1-line-011",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-013",
+      "page_number": 1,
+      "kind": "education",
+      "text": "Bachelor of Information Technology",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 265.62,
+        "width": 163.92,
+        "height": 12.16
+      },
+      "reading_order": 13,
+      "parent_node_id": "page-1-line-011",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-014",
+      "page_number": 1,
+      "kind": "education",
+      "text": "Deakin University, Burwood",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 279.78,
+        "width": 120.82,
+        "height": 12.16
+      },
+      "reading_order": 14,
+      "parent_node_id": "page-1-line-011",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-015",
+      "page_number": 1,
+      "kind": "education",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 294.0,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 15,
+      "parent_node_id": "page-1-line-011",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-016",
+      "page_number": 1,
+      "kind": "education",
+      "text": "Expected completion date: June 2026",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 294.66,
+        "width": 163.08,
+        "height": 12.16
+      },
+      "reading_order": 16,
+      "parent_node_id": "page-1-line-011",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-017",
+      "page_number": 1,
+      "kind": "education",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 308.88,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 17,
+      "parent_node_id": "page-1-line-011",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-018",
+      "page_number": 1,
+      "kind": "education",
+      "text": "Major: Cloud Native Application Development",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 309.54,
+        "width": 199.08,
+        "height": 12.16
+      },
+      "reading_order": 18,
+      "parent_node_id": "page-1-line-011",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-019",
+      "page_number": 1,
+      "kind": "education",
+      "text": "June 2023 – June 2024",
+      "bounding_box": {
+        "x": 43.2,
+        "y": 337.98,
+        "width": 99.12,
+        "height": 12.16
+      },
+      "reading_order": 19,
+      "parent_node_id": "page-1-line-011",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-020",
+      "page_number": 1,
+      "kind": "education",
+      "text": "Diploma of Information Technology",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 337.98,
+        "width": 161.76,
+        "height": 12.16
+      },
+      "reading_order": 20,
+      "parent_node_id": "page-1-line-011",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-021",
+      "page_number": 1,
+      "kind": "education",
+      "text": "Deakin College, Burwood",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 352.14,
+        "width": 113.02,
+        "height": 12.16
+      },
+      "reading_order": 21,
+      "parent_node_id": "page-1-line-011",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-022",
+      "page_number": 1,
+      "kind": "education",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 366.36,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 22,
+      "parent_node_id": "page-1-line-011",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-023",
+      "page_number": 1,
+      "kind": "education",
+      "text": "Achieved WAM of 87",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 367.02,
+        "width": 89.74,
+        "height": 12.16
+      },
+      "reading_order": 23,
+      "parent_node_id": "page-1-line-011",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-024",
+      "page_number": 1,
+      "kind": "section_heading",
+      "text": "Technical Skills",
+      "bounding_box": {
+        "x": 262.25,
+        "y": 403.86,
+        "width": 89.52,
+        "height": 12.16
+      },
+      "reading_order": 24,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-025",
+      "page_number": 1,
+      "kind": "skills",
+      "text": "Cloud & DevOps",
+      "bounding_box": {
+        "x": 43.68,
+        "y": 432.32,
+        "width": 76.32,
+        "height": 12.16
+      },
+      "reading_order": 25,
+      "parent_node_id": "page-1-line-024",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-026",
+      "page_number": 1,
+      "kind": "skills",
+      "text": "Kubernetes, Docker, CI/CD pipelines, Cloud-Native Architecture, Google Cloud",
+      "bounding_box": {
+        "x": 153.74,
+        "y": 432.32,
+        "width": 342.66,
+        "height": 12.16
+      },
+      "reading_order": 26,
+      "parent_node_id": "page-1-line-024",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-027",
+      "page_number": 1,
+      "kind": "skills",
+      "text": "Platform (GCP)",
+      "bounding_box": {
+        "x": 153.74,
+        "y": 444.56,
+        "width": 67.09,
+        "height": 12.16
+      },
+      "reading_order": 27,
+      "parent_node_id": "page-1-line-024",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-028",
+      "page_number": 1,
+      "kind": "skills",
+      "text": "Web & Front-End",
+      "bounding_box": {
+        "x": 43.68,
+        "y": 460.76,
+        "width": 78.6,
+        "height": 12.16
+      },
+      "reading_order": 28,
+      "parent_node_id": "page-1-line-024",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-029",
+      "page_number": 1,
+      "kind": "skills",
+      "text": "React, Next.js, JavaScript, TypeScript, Tailwind CSS, HTML5, CSS3",
+      "bounding_box": {
+        "x": 153.74,
+        "y": 460.76,
+        "width": 285.87,
+        "height": 12.16
+      },
+      "reading_order": 29,
+      "parent_node_id": "page-1-line-024",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-030",
+      "page_number": 1,
+      "kind": "skills",
+      "text": "Back-End & API:",
+      "bounding_box": {
+        "x": 43.68,
+        "y": 476.96,
+        "width": 74.4,
+        "height": 12.16
+      },
+      "reading_order": 30,
+      "parent_node_id": "page-1-line-024",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-031",
+      "page_number": 1,
+      "kind": "skills",
+      "text": "C#/.NET 6, Node.js, Express, SQL, Python, RESTful APIs, Swagger/OpenAPI,",
+      "bounding_box": {
+        "x": 153.74,
+        "y": 476.96,
+        "width": 324.96,
+        "height": 12.16
+      },
+      "reading_order": 31,
+      "parent_node_id": "page-1-line-024",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-032",
+      "page_number": 1,
+      "kind": "skills",
+      "text": "Git/GitHub",
+      "bounding_box": {
+        "x": 153.74,
+        "y": 489.2,
+        "width": 49.09,
+        "height": 12.16
+      },
+      "reading_order": 32,
+      "parent_node_id": "page-1-line-024",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-033",
+      "page_number": 1,
+      "kind": "skills",
+      "text": "Design & CMS:",
+      "bounding_box": {
+        "x": 43.68,
+        "y": 505.4,
+        "width": 68.52,
+        "height": 12.16
+      },
+      "reading_order": 33,
+      "parent_node_id": "page-1-line-024",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-034",
+      "page_number": 1,
+      "kind": "skills",
+      "text": "Figma (design systems, prototyping), WordPress, responsive & mobile-first design",
+      "bounding_box": {
+        "x": 153.74,
+        "y": 505.4,
+        "width": 352.74,
+        "height": 12.16
+      },
+      "reading_order": 34,
+      "parent_node_id": "page-1-line-024",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-035",
+      "page_number": 1,
+      "kind": "skills",
+      "text": "Methodologies & Soft",
+      "bounding_box": {
+        "x": 43.68,
+        "y": 535.88,
+        "width": 98.98,
+        "height": 12.16
+      },
+      "reading_order": 35,
+      "parent_node_id": "page-1-line-024",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-036",
+      "page_number": 1,
+      "kind": "skills",
+      "text": "Agile/Scrum, Sprint Planning, Stakeholder Management, Team Leadership,",
+      "bounding_box": {
+        "x": 153.74,
+        "y": 535.88,
+        "width": 322.15,
+        "height": 12.16
+      },
+      "reading_order": 36,
+      "parent_node_id": "page-1-line-024",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-037",
+      "page_number": 1,
+      "kind": "skills",
+      "text": "Skills",
+      "bounding_box": {
+        "x": 43.68,
+        "y": 548.0,
+        "width": 27.13,
+        "height": 12.16
+      },
+      "reading_order": 37,
+      "parent_node_id": "page-1-line-024",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-038",
+      "page_number": 1,
+      "kind": "skills",
+      "text": "Incident Triage",
+      "bounding_box": {
+        "x": 153.74,
+        "y": 548.0,
+        "width": 65.41,
+        "height": 12.16
+      },
+      "reading_order": 38,
+      "parent_node_id": "page-1-line-024",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-039",
+      "page_number": 1,
+      "kind": "section_heading",
+      "text": "Project and Technical Experience",
+      "bounding_box": {
+        "x": 214.37,
+        "y": 579.71,
+        "width": 185.28,
+        "height": 12.16
+      },
+      "reading_order": 39,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-040",
+      "page_number": 1,
+      "kind": "experience_header",
+      "text": "Oct 2025 – Feb 2026",
+      "bounding_box": {
+        "x": 43.2,
+        "y": 606.23,
+        "width": 90.72,
+        "height": 12.16
+      },
+      "reading_order": 40,
+      "parent_node_id": "page-1-line-039",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-041",
+      "page_number": 1,
+      "kind": "project",
+      "text": "Project Lead – Nutri Help Project",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 606.23,
+        "width": 149.04,
+        "height": 12.16
+      },
+      "reading_order": 41,
+      "parent_node_id": "page-1-line-039",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-042",
+      "page_number": 1,
+      "kind": "experience_header",
+      "text": "Gopher Industries, Burwood",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 618.35,
+        "width": 125.38,
+        "height": 12.16
+      },
+      "reading_order": 42,
+      "parent_node_id": "page-1-line-041",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-043",
+      "page_number": 1,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 630.53,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 43,
+      "parent_node_id": "page-1-line-041",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-044",
+      "page_number": 1,
+      "kind": "experience_description",
+      "text": "Led end-to-end delivery of a digital health platform, coordinating sprint planning,",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 631.19,
+        "width": 352.62,
+        "height": 12.16
+      },
+      "reading_order": 44,
+      "parent_node_id": "page-1-line-041",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-045",
+      "page_number": 1,
+      "kind": "experience_description",
+      "text": "milestone tracking, and stakeholder reporting across 3 functional teams (frontend,",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 643.43,
+        "width": 356.26,
+        "height": 12.16
+      },
+      "reading_order": 45,
+      "parent_node_id": "page-1-line-041",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-046",
+      "page_number": 1,
+      "kind": "experience_description",
+      "text": "backend, design).",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 655.67,
+        "width": 80.62,
+        "height": 12.16
+      },
+      "reading_order": 46,
+      "parent_node_id": "page-1-line-041",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-047",
+      "page_number": 1,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 667.85,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 47,
+      "parent_node_id": "page-1-line-041",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-048",
+      "page_number": 1,
+      "kind": "experience_description",
+      "text": "Designed cross-functional workflows that translated complex healthcare",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 668.51,
+        "width": 356.46,
+        "height": 12.16
+      },
+      "reading_order": 48,
+      "parent_node_id": "page-1-line-041",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-049",
+      "page_number": 1,
+      "kind": "experience_description",
+      "text": "stakeholder requirements into precise technical briefs, reducing development",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 680.75,
+        "width": 356.09,
+        "height": 12.16
+      },
+      "reading_order": 49,
+      "parent_node_id": "page-1-line-041",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-050",
+      "page_number": 1,
+      "kind": "experience_description",
+      "text": "rework cycles by 25%.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 692.86,
+        "width": 97.3,
+        "height": 12.16
+      },
+      "reading_order": 50,
+      "parent_node_id": "page-1-line-041",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-051",
+      "page_number": 1,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 707.09,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 51,
+      "parent_node_id": "page-1-line-041",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-052",
+      "page_number": 1,
+      "kind": "experience_description",
+      "text": "Produced structured progress reports and decision-support documentation,",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 707.74,
+        "width": 356.54,
+        "height": 12.16
+      },
+      "reading_order": 52,
+      "parent_node_id": "page-1-line-041",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-1-line-053",
+      "page_number": 1,
+      "kind": "experience_description",
+      "text": "enabling informed governance across the full delivery pipeline.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 719.98,
+        "width": 270.87,
+        "height": 12.16
+      },
+      "reading_order": 53,
+      "parent_node_id": "page-1-line-041",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-054",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Jul 2025 – Oct 2025",
+      "bounding_box": {
+        "x": 43.2,
+        "y": 39.73,
+        "width": 86.4,
+        "height": 12.16
+      },
+      "reading_order": 54,
+      "parent_node_id": "page-1-line-039",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-055",
+      "page_number": 2,
+      "kind": "project",
+      "text": "Back-End – Birdmark Project",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 39.73,
+        "width": 130.68,
+        "height": 12.16
+      },
+      "reading_order": 55,
+      "parent_node_id": "page-1-line-039",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-056",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Gopher Industries, Burwood",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 51.85,
+        "width": 125.38,
+        "height": 12.16
+      },
+      "reading_order": 56,
+      "parent_node_id": "page-2-line-055",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-057",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 64.03,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 57,
+      "parent_node_id": "page-2-line-055",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-058",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "Engineered digital submission features improving data capture accuracy and",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 64.69,
+        "width": 356.44,
+        "height": 12.16
+      },
+      "reading_order": 58,
+      "parent_node_id": "page-2-line-055",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-059",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "end-user usability for a production system.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 76.95,
+        "width": 186.36,
+        "height": 12.16
+      },
+      "reading_order": 59,
+      "parent_node_id": "page-2-line-055",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-060",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 91.17,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 60,
+      "parent_node_id": "page-2-line-055",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-061",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "Mapped out database schemas in collaboration with stakeholders, maintaining",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 91.83,
+        "width": 356.61,
+        "height": 12.16
+      },
+      "reading_order": 61,
+      "parent_node_id": "page-2-line-055",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-062",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "data integrity, reliable storage, and system consistency across environments.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 103.95,
+        "width": 334.35,
+        "height": 12.16
+      },
+      "reading_order": 62,
+      "parent_node_id": "page-2-line-055",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-063",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 118.29,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 63,
+      "parent_node_id": "page-2-line-055",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-064",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "Served as integration lead for version control workflows, maintaining code quality",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 118.95,
+        "width": 356.33,
+        "height": 12.16
+      },
+      "reading_order": 64,
+      "parent_node_id": "page-2-line-055",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-065",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "and consistency across 3+ concurrent development environments using Git.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 131.07,
+        "width": 329.79,
+        "height": 12.16
+      },
+      "reading_order": 65,
+      "parent_node_id": "page-2-line-055",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-066",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Mar 2025 – May 2025",
+      "bounding_box": {
+        "x": 43.2,
+        "y": 159.63,
+        "width": 93.6,
+        "height": 12.16
+      },
+      "reading_order": 66,
+      "parent_node_id": "page-1-line-039",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-067",
+      "page_number": 2,
+      "kind": "project",
+      "text": "UI/UX Design Intern",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 159.63,
+        "width": 91.54,
+        "height": 12.16
+      },
+      "reading_order": 67,
+      "parent_node_id": "page-1-line-039",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-068",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Magical Getaway Foundation",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 171.75,
+        "width": 127.08,
+        "height": 12.16
+      },
+      "reading_order": 68,
+      "parent_node_id": "page-2-line-067",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-069",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 183.93,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 69,
+      "parent_node_id": "page-2-line-067",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-070",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "Created fully responsive desktop and mobile prototypes in Figma, addressing all",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 184.59,
+        "width": 356.61,
+        "height": 12.16
+      },
+      "reading_order": 70,
+      "parent_node_id": "page-2-line-067",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-071",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "identified usability issues and delivering a complete, production-ready design",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 196.83,
+        "width": 356.58,
+        "height": 12.16
+      },
+      "reading_order": 71,
+      "parent_node_id": "page-2-line-067",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-072",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "system.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 208.95,
+        "width": 36.1,
+        "height": 12.16
+      },
+      "reading_order": 72,
+      "parent_node_id": "page-2-line-067",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-073",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 223.29,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 73,
+      "parent_node_id": "page-2-line-067",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-074",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "Bridged the gap between technical performance analysis and user-facing design",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 223.95,
+        "width": 356.59,
+        "height": 12.16
+      },
+      "reading_order": 74,
+      "parent_node_id": "page-2-line-067",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-075",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "by translating Lighthouse audit findings into actionable UI improvements.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 236.07,
+        "width": 316.11,
+        "height": 12.16
+      },
+      "reading_order": 75,
+      "parent_node_id": "page-2-line-067",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-076",
+      "page_number": 2,
+      "kind": "section_heading",
+      "text": "Professional Experience",
+      "bounding_box": {
+        "x": 239.33,
+        "y": 267.78,
+        "width": 135.36,
+        "height": 12.16
+      },
+      "reading_order": 76,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-077",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "May 2026 – Current",
+      "bounding_box": {
+        "x": 43.2,
+        "y": 294.3,
+        "width": 87.96,
+        "height": 12.16
+      },
+      "reading_order": 77,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-078",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Shift Supervisor",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 294.3,
+        "width": 74.5,
+        "height": 12.16
+      },
+      "reading_order": 78,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-079",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Club Demonstration Services, Ringwood",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 306.42,
+        "width": 176.04,
+        "height": 12.16
+      },
+      "reading_order": 79,
+      "parent_node_id": "page-2-line-078",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-080",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 319.68,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 80,
+      "parent_node_id": "page-2-line-078",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-081",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Promoted to Shift Supervisor within three years, overseeing shift operations,",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 320.34,
+        "width": 335.12,
+        "height": 12.16
+      },
+      "reading_order": 81,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-082",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "team coordination, and compliance standards across demonstration events.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 332.58,
+        "width": 332.43,
+        "height": 12.16
+      },
+      "reading_order": 82,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-083",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 345.72,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 83,
+      "parent_node_id": "page-2-line-082",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-084",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Coordinate scheduling and brief a team of 20 members, ensuring smooth",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 346.38,
+        "width": 321.1,
+        "height": 12.16
+      },
+      "reading_order": 84,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-085",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "execution of demonstrations and consistent adherence to operational protocols.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 358.62,
+        "width": 351.15,
+        "height": 12.16
+      },
+      "reading_order": 85,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-086",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 371.76,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 86,
+      "parent_node_id": "page-2-line-085",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-087",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Act as first point of escalation for on-the-ground issues, resolving customer and",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 372.42,
+        "width": 350.92,
+        "height": 12.16
+      },
+      "reading_order": 87,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-088",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "operational problems under pressure while keeping a calm, clear approach",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 384.66,
+        "width": 324.24,
+        "height": 12.16
+      },
+      "reading_order": 88,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-089",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "directly analogous to triaging urgent support tickets.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 396.9,
+        "width": 225.6,
+        "height": 12.16
+      },
+      "reading_order": 89,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-090",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Jun 2023 – Current",
+      "bounding_box": {
+        "x": 43.2,
+        "y": 421.28,
+        "width": 84.6,
+        "height": 12.16
+      },
+      "reading_order": 90,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-091",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Sales Advisor",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 421.28,
+        "width": 63.46,
+        "height": 12.16
+      },
+      "reading_order": 91,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-092",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Club Demonstration Services, Ringwood",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 433.52,
+        "width": 176.04,
+        "height": 12.16
+      },
+      "reading_order": 92,
+      "parent_node_id": "page-2-line-091",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-093",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 445.7,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 93,
+      "parent_node_id": "page-2-line-091",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-094",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Increased featured product sales volume up by 80% to 100% through highly",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 446.36,
+        "width": 356.6,
+        "height": 12.16
+      },
+      "reading_order": 94,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-095",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "persuasive",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 458.6,
+        "width": 48.88,
+        "height": 12.16
+      },
+      "reading_order": 95,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-096",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "product",
+      "bounding_box": {
+        "x": 271.66,
+        "y": 458.6,
+        "width": 36.14,
+        "height": 12.16
+      },
+      "reading_order": 96,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-097",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "demonstrations",
+      "bounding_box": {
+        "x": 316.36,
+        "y": 458.6,
+        "width": 70.7,
+        "height": 12.16
+      },
+      "reading_order": 97,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-098",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "and",
+      "bounding_box": {
+        "x": 395.58,
+        "y": 458.6,
+        "width": 18.46,
+        "height": 12.16
+      },
+      "reading_order": 98,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-099",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "clear,",
+      "bounding_box": {
+        "x": 422.56,
+        "y": 458.6,
+        "width": 26.7,
+        "height": 12.16
+      },
+      "reading_order": 99,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-100",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "audience-tailored",
+      "bounding_box": {
+        "x": 457.91,
+        "y": 458.6,
+        "width": 79.24,
+        "height": 12.16
+      },
+      "reading_order": 100,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-101",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "value",
+      "bounding_box": {
+        "x": 545.67,
+        "y": 458.6,
+        "width": 25.16,
+        "height": 12.16
+      },
+      "reading_order": 101,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-102",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "propositions.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 470.72,
+        "width": 61.3,
+        "height": 12.16
+      },
+      "reading_order": 102,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-103",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 485.06,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 103,
+      "parent_node_id": "page-2-line-102",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-104",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Troubleshot and maintained workstation equipment, acting as a peer resource",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 485.72,
+        "width": 356.47,
+        "height": 12.16
+      },
+      "reading_order": 104,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-105",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "for new team members.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 497.84,
+        "width": 104.62,
+        "height": 12.16
+      },
+      "reading_order": 105,
+      "parent_node_id": "page-2-line-076",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-106",
+      "page_number": 2,
+      "kind": "section_heading",
+      "text": "Leadership & Community",
+      "bounding_box": {
+        "x": 237.53,
+        "y": 527.24,
+        "width": 139.08,
+        "height": 12.16
+      },
+      "reading_order": 106,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-107",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Mar 2026 – May 2026",
+      "bounding_box": {
+        "x": 43.2,
+        "y": 553.76,
+        "width": 93.6,
+        "height": 12.16
+      },
+      "reading_order": 107,
+      "parent_node_id": "page-2-line-106",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-108",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Leadership 4Impact Cohort Member",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 553.76,
+        "width": 165.84,
+        "height": 12.16
+      },
+      "reading_order": 108,
+      "parent_node_id": "page-2-line-106",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-109",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Study Melbourne, Melbourne",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 566.0,
+        "width": 126.84,
+        "height": 12.16
+      },
+      "reading_order": 109,
+      "parent_node_id": "page-2-line-108",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-110",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 578.21,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 110,
+      "parent_node_id": "page-2-line-108",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-111",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Directed team development of Edu Bridge, an EdTech platform improving",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 578.87,
+        "width": 356.45,
+        "height": 12.16
+      },
+      "reading_order": 111,
+      "parent_node_id": "page-2-line-106",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-112",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "education accessibility progressing from ideation through pivot to final",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 591.11,
+        "width": 356.18,
+        "height": 12.16
+      },
+      "reading_order": 112,
+      "parent_node_id": "page-2-line-106",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-113",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "presentation.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 603.23,
+        "width": 59.98,
+        "height": 12.16
+      },
+      "reading_order": 113,
+      "parent_node_id": "page-2-line-106",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-114",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 617.45,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 114,
+      "parent_node_id": "page-2-line-113",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-115",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Developed collaboration, social impact thinking, and stakeholder communication",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 618.11,
+        "width": 356.14,
+        "height": 12.16
+      },
+      "reading_order": 115,
+      "parent_node_id": "page-2-line-106",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-116",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "skills in a structured leadership program.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 630.23,
+        "width": 178.08,
+        "height": 12.16
+      },
+      "reading_order": 116,
+      "parent_node_id": "page-2-line-106",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-117",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Oct 2024 – Oct 2025",
+      "bounding_box": {
+        "x": 43.2,
+        "y": 656.75,
+        "width": 90.36,
+        "height": 12.16
+      },
+      "reading_order": 117,
+      "parent_node_id": "page-2-line-106",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-118",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Student Ambassador",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 656.75,
+        "width": 97.78,
+        "height": 12.16
+      },
+      "reading_order": 118,
+      "parent_node_id": "page-2-line-106",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-119",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Deakin College, Burwood",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 668.99,
+        "width": 113.02,
+        "height": 12.16
+      },
+      "reading_order": 119,
+      "parent_node_id": "page-2-line-118",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-120",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 681.17,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 120,
+      "parent_node_id": "page-2-line-118",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-121",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Conducted on-campus student events and academic sessions, ensuring smooth",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 681.83,
+        "width": 356.25,
+        "height": 12.16
+      },
+      "reading_order": 121,
+      "parent_node_id": "page-2-line-106",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-122",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "coordination and positive engagement experiences.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 693.94,
+        "width": 224.4,
+        "height": 12.16
+      },
+      "reading_order": 122,
+      "parent_node_id": "page-2-line-106",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-123",
+      "page_number": 2,
+      "kind": "experience_description",
+      "text": "•",
+      "bounding_box": {
+        "x": 196.25,
+        "y": 708.29,
+        "width": 7.33,
+        "height": 12.16
+      },
+      "reading_order": 123,
+      "parent_node_id": "page-2-line-122",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-124",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "Increased student event attendance by over 50% through communication and",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 708.94,
+        "width": 356.52,
+        "height": 12.16
+      },
+      "reading_order": 124,
+      "parent_node_id": "page-2-line-106",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "page-2-line-125",
+      "page_number": 2,
+      "kind": "experience_header",
+      "text": "structured outreach.",
+      "bounding_box": {
+        "x": 214.25,
+        "y": 721.06,
+        "width": 91.3,
+        "height": 12.16
+      },
+      "reading_order": 125,
+      "parent_node_id": "page-2-line-106",
+      "confidence": 1.0
+    }
+  ]
+}

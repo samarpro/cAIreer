@@ -1,0 +1,19 @@
+{
+  "name": "The person's name.",
+  "headline": "A target role or professional title.",
+  "contact": "An email address, phone number, location, or profile link.",
+  "summary": "A profile, objective, or executive summary.",
+  "section_heading": "A heading such as Experience, Education, or Skills.",
+  "experience_header": "A role, employer, location, or date range that identifies one experience.",
+  "experience_description": "A bullet or sentence describing work in an experience.",
+  "education": "A school, degree, course, or study date.",
+  "skills": "A skill, tool, or skill list.",
+  "project": "A project name or project description.",
+  "volunteer": "A volunteer role, organization, or description.",
+  "award": "An award or honor.",
+  "certification": "A certificate, licence, or credential.",
+  "language": "A spoken language and optional proficiency.",
+  "publication": "A paper, article, talk, or other publication.",
+  "reference": "A reference person or their contact details.",
+  "other": "Resume content that fits none of the defined kinds."
+}

@@ -1,0 +1,637 @@
+{
+  "case_id": "sam-kanu-resume-01",
+  "pdf": "sam-kanu-resume-01.pdf",
+  "permission": "synthetic",
+  "nodes": [
+    {
+      "node_id": "name",
+      "page_number": 1,
+      "kind": "name",
+      "text": "Sam Kanu",
+      "bounding_box": {"x": 54, "y": 742, "width": 120, "height": 20},
+      "reading_order": 0,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "contact",
+      "page_number": 1,
+      "kind": "contact",
+      "text": "+61-0415856919 | samguptakanu@gmail.com | linkedin.com/in/samkanu/ | github.com/samarpro | Melbourne, VIC",
+      "bounding_box": {"x": 54, "y": 720, "width": 480, "height": 14},
+      "reading_order": 1,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "section-summary",
+      "page_number": 1,
+      "kind": "section_heading",
+      "text": "PROFESSIONAL SUMMARY",
+      "bounding_box": {"x": 54, "y": 690, "width": 200, "height": 16},
+      "reading_order": 2,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "summary-body",
+      "page_number": 1,
+      "kind": "paragraph",
+      "text": "Detail-oriented IT professional with practical experience across application support, quality assurance, and cloud-based environments. Known for a systematic approach to troubleshooting, documentation, and process improvement - having delivered automation solutions that reduced manual overhead by 5+ hours monthly across teams of 500+ users. Comfortable working within cross-functional environments and liaising across technical and non-technical stakeholders. Familiar with Azure cloud services, AWS, webhook-based integrations, and security-conscious development practices, with a strong commitment to compliance, system integrity, and continuous improvement.",
+      "bounding_box": {"x": 54, "y": 640, "width": 480, "height": 48},
+      "reading_order": 3,
+      "parent_node_id": "section-summary",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "section-competencies",
+      "page_number": 1,
+      "kind": "section_heading",
+      "text": "KEY COMPETENCIES",
+      "bounding_box": {"x": 54, "y": 610, "width": 200, "height": 16},
+      "reading_order": 4,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "competency-ai-systems",
+      "page_number": 1,
+      "kind": "competency_group",
+      "text": "AI Systems & Automation: Agentic Systems · Autonomous Workflows · AI-Driven Data Aggregation · Intelligent Information Pipelines · Large Language Model (LLM) Integration · LangChain · LlamaIndex · Retrieval-Augmented Generation (RAG)",
+      "bounding_box": {"x": 54, "y": 585, "width": 480, "height": 28},
+      "reading_order": 5,
+      "parent_node_id": "section-competencies",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "competency-software",
+      "page_number": 1,
+      "kind": "competency_group",
+      "text": "Software & Technical Implementation: Python Development · Web Scraping (Playwright, Selenium) · API Integration · Webhook Development · JavaScript / TypeScript · React · Django · Node.js · REST API Design · SQL · NoSQL · PostgreSQL · MongoDB · Vector Databases · Hybrid Search (Embeddings + BM25) · NLP Pipelines · N8N Workflow Automation · Process Optimization · Production Deployment",
+      "bounding_box": {"x": 54, "y": 545, "width": 480, "height": 40},
+      "reading_order": 6,
+      "parent_node_id": "section-competencies",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "competency-project-delivery",
+      "page_number": 1,
+      "kind": "competency_group",
+      "text": "Project Delivery: End-to-End System Architecture · Rapid Prototyping · Scalable Backend Design · Data Pipeline Design · Production Deployment · Technical Documentation · Stakeholder Communication · Translating Business Problems into Technical Solutions",
+      "bounding_box": {"x": 54, "y": 515, "width": 480, "height": 28},
+      "reading_order": 7,
+      "parent_node_id": "section-competencies",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "section-experience",
+      "page_number": 1,
+      "kind": "section_heading",
+      "text": "PROFESSIONAL EXPERIENCE",
+      "bounding_box": {"x": 54, "y": 485, "width": 220, "height": 16},
+      "reading_order": 8,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-hack48-title",
+      "page_number": 1,
+      "kind": "job_title",
+      "text": "HACK48 Hackathon Winner",
+      "bounding_box": {"x": 54, "y": 460, "width": 200, "height": 15},
+      "reading_order": 9,
+      "parent_node_id": "section-experience",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-hack48-org",
+      "page_number": 1,
+      "kind": "organization",
+      "text": "Hack48",
+      "bounding_box": {"x": 300, "y": 460, "width": 100, "height": 15},
+      "reading_order": 10,
+      "parent_node_id": "exp-hack48-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-hack48-bullet1",
+      "page_number": 1,
+      "kind": "bullet",
+      "text": "Built a production-grade multi-agent orchestration platform with real-time observability, human-in-the-loop approvals, and a live web dashboard powered by WebSocket — demonstrating end-to-end ownership from architecture through deployment.",
+      "bounding_box": {"x": 66, "y": 440, "width": 468, "height": 28},
+      "reading_order": 11,
+      "parent_node_id": "exp-hack48-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-hack48-bullet2",
+      "page_number": 1,
+      "kind": "bullet",
+      "text": "Designed a parallel agent swarm where a root agent spawns depth-limited child sessions executing concurrently via a Redis event bus",
+      "bounding_box": {"x": 66, "y": 420, "width": 468, "height": 14},
+      "reading_order": 12,
+      "parent_node_id": "exp-hack48-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-hack48-bullet3",
+      "page_number": 1,
+      "kind": "bullet",
+      "text": "Integrated Composio's MCP gateway (calendar, email, search) and AWS Bedrock (Claude) for inference, with Guardrails for safety enforcement",
+      "bounding_box": {"x": 66, "y": 406, "width": 468, "height": 14},
+      "reading_order": 13,
+      "parent_node_id": "exp-hack48-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-hack48-bullet4",
+      "page_number": 1,
+      "kind": "bullet",
+      "text": "Shipped sandboxed task execution in ephemeral Docker containers across bash, browser, and computer-use agents, with a risk classifier gating high-risk actions",
+      "bounding_box": {"x": 66, "y": 392, "width": 468, "height": 14},
+      "reading_order": 14,
+      "parent_node_id": "exp-hack48-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-hack48-bullet5",
+      "page_number": 1,
+      "kind": "bullet",
+      "text": "Exposed multi-channel interfaces via Telegram, WhatsApp, and SMS webhooks, routed through a FastAPI gateway to the session manager",
+      "bounding_box": {"x": 66, "y": 378, "width": 468, "height": 14},
+      "reading_order": 15,
+      "parent_node_id": "exp-hack48-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-market-title",
+      "page_number": 1,
+      "kind": "project_title",
+      "text": "AI Market Intelligence Monitoring System (MVP)",
+      "bounding_box": {"x": 54, "y": 350, "width": 300, "height": 15},
+      "reading_order": 16,
+      "parent_node_id": "section-experience",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-market-org",
+      "page_number": 1,
+      "kind": "organization",
+      "text": "Project | Building Group",
+      "bounding_box": {"x": 360, "y": 350, "width": 150, "height": 15},
+      "reading_order": 17,
+      "parent_node_id": "proj-market-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-market-desc",
+      "page_number": 1,
+      "kind": "paragraph",
+      "text": "Built a prototype AI monitoring system designed to aggregate market signals and surface insights relevant to investors and businesses. The system continuously collects data from multiple sources and structures it into actionable information.",
+      "bounding_box": {"x": 54, "y": 330, "width": 480, "height": 28},
+      "reading_order": 18,
+      "parent_node_id": "proj-market-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-market-bullet1",
+      "page_number": 1,
+      "kind": "bullet",
+      "text": "Tracks precious metal prices, stock data (ASX and NASDAQ), and Melbourne prestige property listings",
+      "bounding_box": {"x": 66, "y": 310, "width": 468, "height": 14},
+      "reading_order": 19,
+      "parent_node_id": "proj-market-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-market-bullet2",
+      "page_number": 1,
+      "kind": "bullet",
+      "text": "Filters property data for high-value suburbs such as Toorak, aligning insights with investor focus areas",
+      "bounding_box": {"x": 66, "y": 296, "width": 468, "height": 14},
+      "reading_order": 20,
+      "parent_node_id": "proj-market-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-market-bullet3",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Designed to evolve into an AI briefing system that summarises market signals and macroeconomic news",
+      "bounding_box": {"x": 66, "y": 742, "width": 468, "height": 14},
+      "reading_order": 21,
+      "parent_node_id": "proj-market-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-market-bullet4",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Developed as a rapid prototype to explore intelligent financial monitoring systems",
+      "bounding_box": {"x": 66, "y": 728, "width": 468, "height": 14},
+      "reading_order": 22,
+      "parent_node_id": "proj-market-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-univ-title",
+      "page_number": 2,
+      "kind": "project_title",
+      "text": "AI University Assistant",
+      "bounding_box": {"x": 54, "y": 700, "width": 220, "height": 15},
+      "reading_order": 23,
+      "parent_node_id": "section-experience",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-univ-org",
+      "page_number": 2,
+      "kind": "organization",
+      "text": "Deakin College",
+      "bounding_box": {"x": 300, "y": 700, "width": 120, "height": 15},
+      "reading_order": 24,
+      "parent_node_id": "proj-univ-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-univ-desc",
+      "page_number": 2,
+      "kind": "paragraph",
+      "text": "Built an AI assistant that helps students instantly find answers to questions about university systems and policies, removing the need to wait days for in-person consultations. The system aggregates information from official college resources and generates contextual answers in natural language.",
+      "bounding_box": {"x": 54, "y": 660, "width": 480, "height": 38},
+      "reading_order": 25,
+      "parent_node_id": "proj-univ-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-univ-bullet1",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Deployed RAG-powered chatbot serving 500+ students with automated response system, currently implementing Outlook/Gmail integration for email follow-ups and supervised AI responses",
+      "bounding_box": {"x": 66, "y": 620, "width": 468, "height": 28},
+      "reading_order": 26,
+      "parent_node_id": "proj-univ-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-univ-bullet2",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Scraped and processed 200+ official college websites to build the knowledge base",
+      "bounding_box": {"x": 66, "y": 600, "width": 468, "height": 14},
+      "reading_order": 27,
+      "parent_node_id": "proj-univ-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-univ-bullet3",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Implemented an AI retrieval system that returns accurate answers grounded in official sources",
+      "bounding_box": {"x": 66, "y": 586, "width": 468, "height": 14},
+      "reading_order": 28,
+      "parent_node_id": "proj-univ-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-univ-bullet4",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Presented the system to Deakin College leadership, after which it was adopted and deployed for students",
+      "bounding_box": {"x": 66, "y": 572, "width": 468, "height": 14},
+      "reading_order": 29,
+      "parent_node_id": "proj-univ-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-univ-tech",
+      "page_number": 2,
+      "kind": "technologies",
+      "text": "Technologies: Python, LangChain, LlamaIndex, Playwright, Selenium, vector search, Google Gemini.",
+      "bounding_box": {"x": 54, "y": 556, "width": 480, "height": 14},
+      "reading_order": 30,
+      "parent_node_id": "proj-univ-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-madmex-title",
+      "page_number": 2,
+      "kind": "job_title",
+      "text": "Automation Developer & Supervisor",
+      "bounding_box": {"x": 54, "y": 528, "width": 260, "height": 15},
+      "reading_order": 31,
+      "parent_node_id": "section-experience",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-madmex-org",
+      "page_number": 2,
+      "kind": "organization",
+      "text": "Mad Mex",
+      "bounding_box": {"x": 340, "y": 528, "width": 90, "height": 15},
+      "reading_order": 32,
+      "parent_node_id": "exp-madmex-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-madmex-dates",
+      "page_number": 2,
+      "kind": "date_range",
+      "text": "August 2024 - Present",
+      "bounding_box": {"x": 400, "y": 528, "width": 130, "height": 15},
+      "reading_order": 33,
+      "parent_node_id": "exp-madmex-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-madmex-bullet1",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Developed custom browser automation solution saving 900 minutes/month (15 hours) by automating order placement, delivery tracking, and store management processes",
+      "bounding_box": {"x": 66, "y": 508, "width": 468, "height": 28},
+      "reading_order": 34,
+      "parent_node_id": "exp-madmex-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-madmex-bullet2",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Identified and prioritized automation opportunities based on ROI, focusing on non-negotiable deliverables first",
+      "bounding_box": {"x": 66, "y": 488, "width": 468, "height": 14},
+      "reading_order": 35,
+      "parent_node_id": "exp-madmex-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-madmex-bullet3",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Built and deployed production-ready solutions using Python and Selenium.",
+      "bounding_box": {"x": 66, "y": 474, "width": 468, "height": 14},
+      "reading_order": 36,
+      "parent_node_id": "exp-madmex-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-madmex-bullet4",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Created training materials that enabled team members to extend and maintain automation systems post-implementation",
+      "bounding_box": {"x": 66, "y": 460, "width": 468, "height": 14},
+      "reading_order": 37,
+      "parent_node_id": "exp-madmex-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-madmex-supervisor",
+      "page_number": 2,
+      "kind": "subheading",
+      "text": "Supervisor",
+      "bounding_box": {"x": 54, "y": 440, "width": 100, "height": 14},
+      "reading_order": 38,
+      "parent_node_id": "exp-madmex-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "exp-madmex-supervisor-bullet1",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Oversaw sales operations with accountability for performance, driving upselling strategies and coordinating promotional activities across the team.",
+      "bounding_box": {"x": 66, "y": 422, "width": 468, "height": 14},
+      "reading_order": 39,
+      "parent_node_id": "exp-madmex-supervisor",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-news-title",
+      "page_number": 2,
+      "kind": "project_title",
+      "text": "AI Newsletter Automation Platform",
+      "bounding_box": {"x": 54, "y": 394, "width": 260, "height": 15},
+      "reading_order": 40,
+      "parent_node_id": "section-experience",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-news-role",
+      "page_number": 2,
+      "kind": "role",
+      "text": "AI Lead - DSEC Automation Project",
+      "bounding_box": {"x": 340, "y": 394, "width": 190, "height": 15},
+      "reading_order": 41,
+      "parent_node_id": "proj-news-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-news-desc",
+      "page_number": 2,
+      "kind": "paragraph",
+      "text": "Built a system that automatically gathers news from multiple sources and generates structured newsletters, removing the need for manual curation.",
+      "bounding_box": {"x": 54, "y": 374, "width": 480, "height": 14},
+      "reading_order": 42,
+      "parent_node_id": "proj-news-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-news-bullet1",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Aggregates content from multiple news sources using automated data pipelines",
+      "bounding_box": {"x": 66, "y": 358, "width": 468, "height": 14},
+      "reading_order": 43,
+      "parent_node_id": "proj-news-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-news-bullet2",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Generates structured newsletters ready for publication",
+      "bounding_box": {"x": 66, "y": 344, "width": 468, "height": 14},
+      "reading_order": 44,
+      "parent_node_id": "proj-news-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-news-bullet3",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Developed a drag-and-drop template interface for editing and distribution",
+      "bounding_box": {"x": 66, "y": 330, "width": 468, "height": 14},
+      "reading_order": 45,
+      "parent_node_id": "proj-news-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-news-bullet4",
+      "page_number": 2,
+      "kind": "bullet",
+      "text": "Leading ongoing development as AI Lead of the project",
+      "bounding_box": {"x": 66, "y": 316, "width": 468, "height": 14},
+      "reading_order": 46,
+      "parent_node_id": "proj-news-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "proj-news-tech",
+      "page_number": 2,
+      "kind": "technologies",
+      "text": "Technologies: Python, RSS parsing, web scraping, AI summarisation pipelines, GitHub Actions.",
+      "bounding_box": {"x": 54, "y": 298, "width": 480, "height": 14},
+      "reading_order": 47,
+      "parent_node_id": "proj-news-title",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "section-skills",
+      "page_number": 3,
+      "kind": "section_heading",
+      "text": "Technical Skills",
+      "bounding_box": {"x": 54, "y": 742, "width": 160, "height": 16},
+      "reading_order": 48,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "skill-support-qa",
+      "page_number": 3,
+      "kind": "skill_group",
+      "text": "Technical Support & QA: Application Support · Quality Assurance & Testing · Bug Documentation & Reporting · User Acceptance Testing (UAT) · UX Testing · Human-Centred Product Design",
+      "bounding_box": {"x": 54, "y": 716, "width": 480, "height": 28},
+      "reading_order": 49,
+      "parent_node_id": "section-skills",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "skill-database",
+      "page_number": 3,
+      "kind": "skill_group",
+      "text": "Database Management: SQL Databases · Vector Databases · Data Processing Pipelines · Information Aggregation Pipelines",
+      "bounding_box": {"x": 54, "y": 688, "width": 480, "height": 14},
+      "reading_order": 50,
+      "parent_node_id": "section-skills",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "skill-security",
+      "page_number": 3,
+      "kind": "skill_group",
+      "text": "Security & Infrastructure: Docker Containerisation · CI/CD Pipelines (GitHub Actions) · Cloud Integrations · DDoS Awareness & Network Security Principles · REST API Design",
+      "bounding_box": {"x": 54, "y": 660, "width": 480, "height": 28},
+      "reading_order": 51,
+      "parent_node_id": "section-skills",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "skill-cloud",
+      "page_number": 3,
+      "kind": "skill_group",
+      "text": "Cloud & Vendor Platforms: AWS (Bedrock) · API Integration · Webhook-Based Integrations · Ngrok · Automation Tooling",
+      "bounding_box": {"x": 54, "y": 632, "width": 480, "height": 14},
+      "reading_order": 52,
+      "parent_node_id": "section-skills",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "skill-automation",
+      "page_number": 3,
+      "kind": "skill_group",
+      "text": "Automation & Workflow Orchestration: AI Workflow Automation (n8n) · Process Automation · Workflow Orchestration · Scheduled Data Pipelines · Web Scraping & Data Extraction (Playwright · Selenium)",
+      "bounding_box": {"x": 54, "y": 604, "width": 480, "height": 28},
+      "reading_order": 53,
+      "parent_node_id": "section-skills",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "skill-ai-llm",
+      "page_number": 3,
+      "kind": "skill_group",
+      "text": "AI Systems & LLM Applications: LLM Integration · AI Agents · Agentic Workflows · RAG · LangChain · LlamaIndex · NLP · AI-Driven Data Analysis",
+      "bounding_box": {"x": 54, "y": 576, "width": 480, "height": 14},
+      "reading_order": 54,
+      "parent_node_id": "section-skills",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "skill-dev-tools",
+      "page_number": 3,
+      "kind": "skill_group",
+      "text": "Development Tools & Backend: Backend Development (Django · Node.js) · Frontend Development (React · Tailwind CSS) · Git · GitHub · Docker",
+      "bounding_box": {"x": 54, "y": 548, "width": 480, "height": 28},
+      "reading_order": 55,
+      "parent_node_id": "section-skills",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "section-education",
+      "page_number": 3,
+      "kind": "section_heading",
+      "text": "EDUCATION & CERTIFICATIONS",
+      "bounding_box": {"x": 54, "y": 510, "width": 240, "height": 16},
+      "reading_order": 56,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "edu-degree",
+      "page_number": 3,
+      "kind": "education_entry",
+      "text": "Bachelor of Information Technology — Majors: Networking and Cloud Computing",
+      "bounding_box": {"x": 54, "y": 488, "width": 400, "height": 14},
+      "reading_order": 57,
+      "parent_node_id": "section-education",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "edu-degree-school",
+      "page_number": 3,
+      "kind": "institution",
+      "text": "Deakin University - Ongoing",
+      "bounding_box": {"x": 54, "y": 472, "width": 200, "height": 14},
+      "reading_order": 58,
+      "parent_node_id": "edu-degree",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "edu-diploma",
+      "page_number": 3,
+      "kind": "education_entry",
+      "text": "Diploma of IT — Completed with focus on practical automation and AI implementation",
+      "bounding_box": {"x": 54, "y": 448, "width": 440, "height": 14},
+      "reading_order": 59,
+      "parent_node_id": "section-education",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "edu-diploma-school",
+      "page_number": 3,
+      "kind": "institution",
+      "text": "Deakin College: WAM ~92",
+      "bounding_box": {"x": 54, "y": 432, "width": 180, "height": 14},
+      "reading_order": 60,
+      "parent_node_id": "edu-diploma",
+      "confidence": 1.0
+    },
+    {
+      "node_id": "section-references",
+      "page_number": 3,
+      "kind": "section_heading",
+      "text": "REFERENCES",
+      "bounding_box": {"x": 54, "y": 404, "width": 120, "height": 16},
+      "reading_order": 61,
+      "parent_node_id": null,
+      "confidence": 1.0
+    },
+    {
+      "node_id": "references-body",
+      "page_number": 3,
+      "kind": "paragraph",
+      "text": "Available on request.",
+      "bounding_box": {"x": 54, "y": 386, "width": 140, "height": 14},
+      "reading_order": 62,
+      "parent_node_id": "section-references",
+      "confidence": 1.0
+    }
+  ]
+}
