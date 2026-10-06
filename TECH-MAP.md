@@ -268,3 +268,9 @@ The monorepo exists so later slices have a place to land. New product infrastruc
 ## Initial model gateway slice
 
 FastAPI owns `POST /internal/models/evaluate`, with an internal bearer token, server-selected Jev model, a fixed Vercel gateway URL, a 60-second timeout, and sanitized upstream errors. Responses preserve gateway usage and cost metadata. See [API setup and eval example](services/api/README.md). Model-based evals need a running API; deterministic PDF parsing does not. This infrastructure does not integrate an experimental capability into product screens.
+
+Resume evals offer optional sequential grouping through that endpoint. Each line is
+a pending candidate until its boundary decision passes validation, then joins the
+processed FIFO context. Saved group membership survives context eviction. Request
+size currently uses a conservative UTF-8 byte estimate with headroom, not a verified
+Jev tokenizer. See [resume eval usage and limits](evals/resume/README.md).

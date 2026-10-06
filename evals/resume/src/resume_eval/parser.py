@@ -50,10 +50,10 @@ def parse_pdf(path: Path) -> list[ResumeNode]:
     with pymupdf.open(path) as document:
         for page_number, page in enumerate(document, start=1):
             # Keep the document's extraction order so the eval can measure its quality.
-            for block in page.get_text("dict")["blocks"]:
+            for block_index, block in enumerate(page.get_text("dict")["blocks"]):
                 if block["type"] != 0:
                     continue
-                for line in block["lines"]:
+                for line_index, line in enumerate(block["lines"]):
                     for span in line["spans"]:
                         text = span["text"].strip()
                         if not text:
@@ -77,6 +77,7 @@ def parse_pdf(path: Path) -> list[ResumeNode]:
                                     "font_size": span["size"],
                                     "font": span["font"],
                                     "geometry_method": "pymupdf_span_bbox",
+                                    "line_id": f"page-{page_number}-block-{block_index}-line-{line_index}",
                                 },
                                 confidence=0.0,
                             )
@@ -92,6 +93,7 @@ def annotate_pdf(
     if output_path is None:
         output_path = Path(__file__).resolve().parents[2] / "results" / f"annotated-{path.name}"
 
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     with pymupdf.open(path) as document:
         for page_number, page in enumerate(document, start=1):
             # A one-character span remains in the eval data but gets no visible box.

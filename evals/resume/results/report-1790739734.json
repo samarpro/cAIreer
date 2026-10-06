@@ -1,0 +1,3041 @@
+{
+  "suite": "resume-spatial-parsing",
+  "runs": [
+    {
+      "case_id": "sujal-joshi-resume-01",
+      "permission": "user-provided for local evaluation; redistribution rights unconfirmed",
+      "candidate": "pymupdf-spans",
+      "code_revision": "d547283",
+      "runtime": {
+        "python": "3.13.7",
+        "system": "Darwin",
+        "machine": "arm64"
+      },
+      "quality": {
+        "text_recovery": 0.9982585981715281,
+        "reading_order": 0.7536231884057971,
+        "node_coverage": 0.8333333333333334,
+        "spatial_overlap": 0.9246263021449044,
+        "label_accuracy": 0.0
+      },
+      "resources": {
+        "wall_seconds": 1.7988083340023877,
+        "cpu_seconds": 1.798681,
+        "peak_python_alloc_bytes": 456847,
+        "process_max_rss_bytes": 71368704
+      },
+      "hosted_usage": {
+        "model": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null
+      },
+      "counts": {
+        "expected_nodes": 126,
+        "actual_nodes": 150
+      },
+      "actual": [
+        {
+          "node_id": "page-1-span-0",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Sujal Joshi",
+          "bounding_box": {
+            "x": 277.8500061035156,
+            "y": 39.727577209472656,
+            "width": 58.321868896484375,
+            "height": 12.16115951538086
+          },
+          "reading_order": 0,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-1",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Tel:",
+          "bounding_box": {
+            "x": 264.4100036621094,
+            "y": 51.847572326660156,
+            "width": 21.41400146484375,
+            "height": 12.161163330078125
+          },
+          "reading_order": 1,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-2",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "0421919526",
+          "bounding_box": {
+            "x": 286.7300109863281,
+            "y": 51.847572326660156,
+            "width": 63.001861572265625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 2,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-3",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Email:",
+          "bounding_box": {
+            "x": 237.1699981689453,
+            "y": 64.08756256103516,
+            "width": 30.786361694335938,
+            "height": 12.161163330078125
+          },
+          "reading_order": 3,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-4",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "sujaljoshi77@gmail.com",
+          "bounding_box": {
+            "x": 268.010009765625,
+            "y": 64.08756256103516,
+            "width": 108.96188354492188,
+            "height": 12.161163330078125
+          },
+          "reading_order": 4,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-5",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "LinkedIn:",
+          "bounding_box": {
+            "x": 180.13999938964844,
+            "y": 76.34757232666016,
+            "width": 43.99334716796875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 5,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-6",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "www.linkedin.com/in/sujal-joshi-bubblegumbo/",
+          "bounding_box": {
+            "x": 224.2100067138672,
+            "y": 76.34757232666016,
+            "width": 207.52342224121094,
+            "height": 12.161163330078125
+          },
+          "reading_order": 6,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-7",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "GitHub:",
+          "bounding_box": {
+            "x": 217.25,
+            "y": 88.58756256103516,
+            "width": 37.36991882324219,
+            "height": 12.161163330078125
+          },
+          "reading_order": 7,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-8",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "https://github.com/Bubblegumb",
+          "bounding_box": {
+            "x": 254.69000244140625,
+            "y": 88.58756256103516,
+            "width": 139.80831909179688,
+            "height": 12.161163330078125
+          },
+          "reading_order": 8,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-9",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Portfolio:",
+          "bounding_box": {
+            "x": 226.61000061035156,
+            "y": 100.70755767822266,
+            "width": 44.57099914550781,
+            "height": 12.161163330078125
+          },
+          "reading_order": 9,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-10",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "https://bubblegumbo.dev/",
+          "bounding_box": {
+            "x": 271.25,
+            "y": 100.70755767822266,
+            "width": 113.98211669921875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 10,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-11",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Career Profile",
+          "bounding_box": {
+            "x": 267.4100036621094,
+            "y": 128.30752563476562,
+            "width": 79.20187377929688,
+            "height": 12.161163330078125
+          },
+          "reading_order": 11,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-12",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Cloud Native Application Development graduate from Deakin University with a strong foundation in full-stack engineering,",
+          "bounding_box": {
+            "x": 43.20000076293945,
+            "y": 154.82754516601562,
+            "width": 523.9060173034668,
+            "height": 12.161163330078125
+          },
+          "reading_order": 12,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-13",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "DevOps pipelines, and UI/UX prototyping. Proven capability in guiding cross-functional technical teams, constructing",
+          "bounding_box": {
+            "x": 43.20000076293945,
+            "y": 168.26754760742188,
+            "width": 504.08002853393555,
+            "height": 12.161163330078125
+          },
+          "reading_order": 13,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-14",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "scalable database architectures, and managing high-pressure operational environments. Combines deep technical",
+          "bounding_box": {
+            "x": 43.20000076293945,
+            "y": 181.70755004882812,
+            "width": 497.2506217956543,
+            "height": 12.161163330078125
+          },
+          "reading_order": 14,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-15",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "fluency in containerized environments with an agile, client-focused mindset to deliver production-ready digital solutions.",
+          "bounding_box": {
+            "x": 43.20000076293945,
+            "y": 195.14755249023438,
+            "width": 519.2018547058105,
+            "height": 12.161163330078125
+          },
+          "reading_order": 15,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-16",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Education",
+          "bounding_box": {
+            "x": 278.45001220703125,
+            "y": 237.17758178710938,
+            "width": 57.24188232421875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 16,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-17",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "July 2024 \u2013 July 2026",
+          "bounding_box": {
+            "x": 43.20000076293945,
+            "y": 265.6175231933594,
+            "width": 90.15415573120117,
+            "height": 12.161163330078125
+          },
+          "reading_order": 17,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-18",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Bachelor of Information Technology",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 265.6175231933594,
+            "width": 161.71051025390625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 18,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-19",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Deakin University, Burwood",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 279.7775573730469,
+            "width": 118.59371948242188,
+            "height": 12.161163330078125
+          },
+          "reading_order": 19,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-20",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 294.0002136230469,
+            "width": 4.58160400390625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 20,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-21",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Expected completion date: June 2026",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 294.6575622558594,
+            "width": 163.08187866210938,
+            "height": 12.161163330078125
+          },
+          "reading_order": 21,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-22",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 308.8802185058594,
+            "width": 4.58160400390625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 22,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-23",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Major: Cloud Native Application Development",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 309.5375671386719,
+            "width": 199.08187866210938,
+            "height": 12.161163330078125
+          },
+          "reading_order": 23,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-24",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "June 2023 \u2013 June 2024",
+          "bounding_box": {
+            "x": 43.20000076293945,
+            "y": 337.9775390625,
+            "width": 97.00458908081055,
+            "height": 12.161163330078125
+          },
+          "reading_order": 24,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-25",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Diploma of Information Technology",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 337.9775390625,
+            "width": 159.55914306640625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 25,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-26",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Deakin College, Burwood",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 352.1375427246094,
+            "width": 110.86474609375,
+            "height": 12.161163330078125
+          },
+          "reading_order": 26,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-27",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 366.3601989746094,
+            "width": 4.58160400390625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 27,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-28",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Achieved WAM of 87",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 367.0175476074219,
+            "width": 89.74188232421875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 28,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-29",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Technical Skills",
+          "bounding_box": {
+            "x": 262.25,
+            "y": 403.8575439453125,
+            "width": 89.52188110351562,
+            "height": 12.161163330078125
+          },
+          "reading_order": 29,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-30",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Cloud & DevOps",
+          "bounding_box": {
+            "x": 43.68000030517578,
+            "y": 432.31756591796875,
+            "width": 76.32188415527344,
+            "height": 12.161163330078125
+          },
+          "reading_order": 30,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-31",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Kubernetes, Docker, CI/CD pipelines, Cloud-Native Architecture, Google Cloud",
+          "bounding_box": {
+            "x": 153.74000549316406,
+            "y": 432.31756591796875,
+            "width": 342.66041564941406,
+            "height": 12.161163330078125
+          },
+          "reading_order": 31,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-32",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Platform (GCP)",
+          "bounding_box": {
+            "x": 153.74000549316406,
+            "y": 444.55755615234375,
+            "width": 67.09187316894531,
+            "height": 12.161163330078125
+          },
+          "reading_order": 32,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-33",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Web & Front-End",
+          "bounding_box": {
+            "x": 43.68000030517578,
+            "y": 460.7575378417969,
+            "width": 78.60188293457031,
+            "height": 12.161163330078125
+          },
+          "reading_order": 33,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-34",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "React, Next.js, JavaScript, TypeScript, Tailwind CSS, HTML5, CSS3",
+          "bounding_box": {
+            "x": 153.74000549316406,
+            "y": 460.7575378417969,
+            "width": 285.8718719482422,
+            "height": 12.161163330078125
+          },
+          "reading_order": 34,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-35",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Back-End & API:",
+          "bounding_box": {
+            "x": 43.68000030517578,
+            "y": 476.9575500488281,
+            "width": 72.20771789550781,
+            "height": 12.161163330078125
+          },
+          "reading_order": 35,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-36",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "C#/.NET 6, Node.js, Express, SQL, Python, RESTful APIs, Swagger/OpenAPI,",
+          "bounding_box": {
+            "x": 153.74000549316406,
+            "y": 476.9575500488281,
+            "width": 324.9550323486328,
+            "height": 12.161163330078125
+          },
+          "reading_order": 36,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-37",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Git/GitHub",
+          "bounding_box": {
+            "x": 153.74000549316406,
+            "y": 489.1975402832031,
+            "width": 49.09187316894531,
+            "height": 12.161163330078125
+          },
+          "reading_order": 37,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-38",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Design & CMS:",
+          "bounding_box": {
+            "x": 43.68000030517578,
+            "y": 505.3975524902344,
+            "width": 68.52188110351562,
+            "height": 12.161163330078125
+          },
+          "reading_order": 38,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-39",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Figma (design systems, prototyping), WordPress, responsive & mobile-first design",
+          "bounding_box": {
+            "x": 153.74000549316406,
+            "y": 505.3975524902344,
+            "width": 352.7418670654297,
+            "height": 12.161163330078125
+          },
+          "reading_order": 39,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-40",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Methodologies & Soft",
+          "bounding_box": {
+            "x": 43.68000030517578,
+            "y": 535.8775634765625,
+            "width": 98.98247528076172,
+            "height": 12.1611328125
+          },
+          "reading_order": 40,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-41",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Skills",
+          "bounding_box": {
+            "x": 43.68000030517578,
+            "y": 547.99755859375,
+            "width": 25.02947998046875,
+            "height": 12.1611328125
+          },
+          "reading_order": 41,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-42",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Agile/Scrum, Sprint Planning, Stakeholder Management, Team Leadership,",
+          "bounding_box": {
+            "x": 153.74000549316406,
+            "y": 535.8775634765625,
+            "width": 322.14625549316406,
+            "height": 12.1611328125
+          },
+          "reading_order": 42,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-43",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Incident Triage",
+          "bounding_box": {
+            "x": 153.74000549316406,
+            "y": 547.99755859375,
+            "width": 65.41188049316406,
+            "height": 12.1611328125
+          },
+          "reading_order": 43,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-44",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Project and Technical Experience",
+          "bounding_box": {
+            "x": 214.3699951171875,
+            "y": 579.7075805664062,
+            "width": 185.28189086914062,
+            "height": 12.1611328125
+          },
+          "reading_order": 44,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-45",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Oct 2025 \u2013 Feb 2026",
+          "bounding_box": {
+            "x": 43.20000076293945,
+            "y": 606.2276000976562,
+            "width": 88.59415817260742,
+            "height": 12.1611328125
+          },
+          "reading_order": 45,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-46",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Project Lead \u2013 Nutri Help Project",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 606.2276000976562,
+            "width": 149.0418701171875,
+            "height": 12.1611328125
+          },
+          "reading_order": 46,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-47",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Gopher Industries, Burwood",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 618.3475952148438,
+            "width": 125.38186645507812,
+            "height": 12.1611328125
+          },
+          "reading_order": 47,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-48",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 630.5301513671875,
+            "width": 4.58160400390625,
+            "height": 12.16119384765625
+          },
+          "reading_order": 48,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-49",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Led end-to-end delivery",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 631.1875610351562,
+            "width": 107.10794067382812,
+            "height": 12.1611328125
+          },
+          "reading_order": 49,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-50",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "of a digital health platform, coordinating sprint planning,",
+          "bounding_box": {
+            "x": 321.42999267578125,
+            "y": 631.1875610351562,
+            "width": 245.44244384765625,
+            "height": 12.1611328125
+          },
+          "reading_order": 50,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-51",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "milestone tracking, and stakeholder reporting across",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 643.4276123046875,
+            "width": 228.64163208007812,
+            "height": 12.1611328125
+          },
+          "reading_order": 51,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-52",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "3",
+          "bounding_box": {
+            "x": 443.2300109863281,
+            "y": 643.4276123046875,
+            "width": 7.301910400390625,
+            "height": 12.1611328125
+          },
+          "reading_order": 52,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-53",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "functional teams (frontend,",
+          "bounding_box": {
+            "x": 450.5799865722656,
+            "y": 643.4276123046875,
+            "width": 119.92837524414062,
+            "height": 12.1611328125
+          },
+          "reading_order": 53,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-54",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "backend, design).",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 655.6676025390625,
+            "width": 80.62188720703125,
+            "height": 12.1611328125
+          },
+          "reading_order": 54,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-55",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 667.8501586914062,
+            "width": 4.58160400390625,
+            "height": 12.16119384765625
+          },
+          "reading_order": 55,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-56",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Designed cross-functional workflows",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 668.507568359375,
+            "width": 179.89376831054688,
+            "height": 12.1611328125
+          },
+          "reading_order": 56,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-57",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "that translated complex healthcare",
+          "bounding_box": {
+            "x": 394.2699890136719,
+            "y": 668.507568359375,
+            "width": 176.44070434570312,
+            "height": 12.1611328125
+          },
+          "reading_order": 57,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-58",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "stakeholder requirements into precise technical briefs, reducing development",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 680.74755859375,
+            "width": 356.089599609375,
+            "height": 12.1611328125
+          },
+          "reading_order": 58,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-59",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "rework cycles by 25%.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 692.8635864257812,
+            "width": 97.3018798828125,
+            "height": 12.1611328125
+          },
+          "reading_order": 59,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-60",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 707.086181640625,
+            "width": 4.58160400390625,
+            "height": 12.16119384765625
+          },
+          "reading_order": 60,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-61",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Produced structured progress reports",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 707.7435913085938,
+            "width": 180.0966796875,
+            "height": 12.1611328125
+          },
+          "reading_order": 61,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-62",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "and decision-support documentation,",
+          "bounding_box": {
+            "x": 394.6300048828125,
+            "y": 707.7435913085938,
+            "width": 176.15863037109375,
+            "height": 12.1611328125
+          },
+          "reading_order": 62,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-63",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "enabling informed governance across the full delivery pipeline.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 719.9835815429688,
+            "width": 270.87188720703125,
+            "height": 12.1611328125
+          },
+          "reading_order": 63,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-64",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Jul 2025 \u2013 Oct 2025",
+          "bounding_box": {
+            "x": 43.20000076293945,
+            "y": 39.727577209472656,
+            "width": 84.2741584777832,
+            "height": 12.16115951538086
+          },
+          "reading_order": 64,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-65",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Back-End \u2013 Birdmark Project",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 39.727577209472656,
+            "width": 130.681884765625,
+            "height": 12.16115951538086
+          },
+          "reading_order": 65,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-66",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Gopher Industries, Burwood",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 51.847572326660156,
+            "width": 125.38186645507812,
+            "height": 12.161163330078125
+          },
+          "reading_order": 66,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-67",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 64.03018188476562,
+            "width": 4.58160400390625,
+            "height": 12.161155700683594
+          },
+          "reading_order": 67,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-68",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Engineered digital submission features",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 64.68753814697266,
+            "width": 182.44729614257812,
+            "height": 12.161163330078125
+          },
+          "reading_order": 68,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-69",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "improving data capture accuracy and",
+          "bounding_box": {
+            "x": 396.9100036621094,
+            "y": 64.68753814697266,
+            "width": 173.77798461914062,
+            "height": 12.161163330078125
+          },
+          "reading_order": 69,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-70",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "end-user usability for a production system.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 76.94754791259766,
+            "width": 186.36187744140625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 70,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-71",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 91.17019653320312,
+            "width": 4.58160400390625,
+            "height": 12.161155700683594
+          },
+          "reading_order": 71,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-72",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Mapped out database schemas",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 91.82755279541016,
+            "width": 145.10101318359375,
+            "height": 12.161163330078125
+          },
+          "reading_order": 72,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-73",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "in collaboration with stakeholders, maintaining",
+          "bounding_box": {
+            "x": 359.4700012207031,
+            "y": 91.82755279541016,
+            "width": 211.38729858398438,
+            "height": 12.161163330078125
+          },
+          "reading_order": 73,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-74",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "data integrity, reliable storage, and system consistency across environments.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 103.94754791259766,
+            "width": 334.35186767578125,
+            "height": 12.161163330078125
+          },
+          "reading_order": 74,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-75",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 118.29019165039062,
+            "width": 4.58160400390625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 75,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-76",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Served as integration lead",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 118.94754791259766,
+            "width": 117.45828247070312,
+            "height": 12.161155700683594
+          },
+          "reading_order": 76,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-77",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "for version control workflows, maintaining code quality",
+          "bounding_box": {
+            "x": 331.989990234375,
+            "y": 118.94754791259766,
+            "width": 238.58935546875,
+            "height": 12.161155700683594
+          },
+          "reading_order": 77,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-78",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "and consistency across 3+ concurrent development environments using Git.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 131.06753540039062,
+            "width": 329.7918701171875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 78,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-79",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Mar 2025 \u2013 May 2025",
+          "bounding_box": {
+            "x": 43.20000076293945,
+            "y": 159.62753295898438,
+            "width": 91.47414779663086,
+            "height": 12.161163330078125
+          },
+          "reading_order": 79,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-80",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "UI/UX Design Intern",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 159.62753295898438,
+            "width": 91.5418701171875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 80,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-81",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Magical Getaway Foundation",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 171.74752807617188,
+            "width": 127.08187866210938,
+            "height": 12.161163330078125
+          },
+          "reading_order": 81,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-82",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 183.93020629882812,
+            "width": 4.58160400390625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 82,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-83",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Created fully responsive desktop and mobile",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 184.58755493164062,
+            "width": 202.75173950195312,
+            "height": 12.161163330078125
+          },
+          "reading_order": 83,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-84",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "prototypes in Figma, addressing all",
+          "bounding_box": {
+            "x": 417.19000244140625,
+            "y": 184.58755493164062,
+            "width": 153.67169189453125,
+            "height": 12.161163330078125
+          },
+          "reading_order": 84,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-85",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "identified usability issues and delivering a complete, production-ready design",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 196.82754516601562,
+            "width": 356.58172607421875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 85,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-86",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "system.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 208.94754028320312,
+            "width": 36.10188293457031,
+            "height": 12.161163330078125
+          },
+          "reading_order": 86,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-87",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 223.29019165039062,
+            "width": 4.58160400390625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 87,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-88",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Bridged the gap",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 223.94754028320312,
+            "width": 73.84344482421875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 88,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-89",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "between technical performance analysis and user-facing design",
+          "bounding_box": {
+            "x": 289.010009765625,
+            "y": 223.94754028320312,
+            "width": 281.830322265625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 89,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-90",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "by translating Lighthouse audit findings into actionable UI improvements.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 236.06753540039062,
+            "width": 316.11187744140625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 90,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-91",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Professional Experience",
+          "bounding_box": {
+            "x": 239.3300018310547,
+            "y": 267.7775573730469,
+            "width": 135.3618927001953,
+            "height": 12.161163330078125
+          },
+          "reading_order": 91,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-92",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "May 2026 \u2013 Current",
+          "bounding_box": {
+            "x": 43.20000076293945,
+            "y": 294.29754638671875,
+            "width": 85.74309921264648,
+            "height": 12.161163330078125
+          },
+          "reading_order": 92,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-93",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Shift Supervisor",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 294.29754638671875,
+            "width": 74.50189208984375,
+            "height": 12.161163330078125
+          },
+          "reading_order": 93,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-94",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Club Demonstration Services, Ringwood",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 306.41754150390625,
+            "width": 176.0418701171875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 94,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-95",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 319.6802062988281,
+            "width": 4.58160400390625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 95,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-96",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Promoted to Shift Supervisor",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 320.3375549316406,
+            "width": 130.85452270507812,
+            "height": 12.161163330078125
+          },
+          "reading_order": 96,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-97",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "within three years, overseeing shift operations,",
+          "bounding_box": {
+            "x": 345.30999755859375,
+            "y": 320.3375549316406,
+            "width": 204.05859375,
+            "height": 12.161163330078125
+          },
+          "reading_order": 97,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-98",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "team coordination, and compliance standards across demonstration events.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 332.5775451660156,
+            "width": 332.43182373046875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 98,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-99",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 345.72021484375,
+            "width": 4.58160400390625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 99,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-100",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Coordinate scheduling",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 346.3775634765625,
+            "width": 103.26528930664062,
+            "height": 12.161163330078125
+          },
+          "reading_order": 100,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-101",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "and brief a team of 20 members, ensuring smooth",
+          "bounding_box": {
+            "x": 317.57000732421875,
+            "y": 346.3775634765625,
+            "width": 217.78350830078125,
+            "height": 12.161163330078125
+          },
+          "reading_order": 101,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-102",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "execution of demonstrations and consistent adherence to operational protocols.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 358.6175537109375,
+            "width": 351.15185546875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 102,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-103",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 371.76019287109375,
+            "width": 4.58160400390625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 103,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-104",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Act as first point of escalation",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 372.41754150390625,
+            "width": 134.93814086914062,
+            "height": 12.161163330078125
+          },
+          "reading_order": 104,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-105",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "for on-the-ground issues, resolving customer and",
+          "bounding_box": {
+            "x": 349.3900146484375,
+            "y": 372.41754150390625,
+            "width": 215.775146484375,
+            "height": 12.161163330078125
+          },
+          "reading_order": 105,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-106",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "operational problems under pressure while keeping a calm, clear approach",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 384.6575622558594,
+            "width": 324.23773193359375,
+            "height": 12.161163330078125
+          },
+          "reading_order": 106,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-107",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "directly analogous to triaging urgent support tickets.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 396.8975524902344,
+            "width": 225.60186767578125,
+            "height": 12.161163330078125
+          },
+          "reading_order": 107,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-108",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Jun 2023 \u2013 Current",
+          "bounding_box": {
+            "x": 43.20000076293945,
+            "y": 421.2775573730469,
+            "width": 82.38309860229492,
+            "height": 12.161163330078125
+          },
+          "reading_order": 108,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-109",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Sales Advisor",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 421.2775573730469,
+            "width": 63.461883544921875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 109,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-110",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Club Demonstration Services, Ringwood",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 433.5175476074219,
+            "width": 176.0418701171875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 110,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-111",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 445.7001953125,
+            "width": 4.58160400390625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 111,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-112",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Increased featured product sales volume up by 80% to 100%",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 446.3575439453125,
+            "width": 289.8240661621094,
+            "height": 12.161163330078125
+          },
+          "reading_order": 112,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-113",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "through highly",
+          "bounding_box": {
+            "x": 506.260009765625,
+            "y": 446.3575439453125,
+            "width": 64.5904541015625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 113,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-114",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "persuasive",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 458.5975646972656,
+            "width": 48.8836669921875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 114,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-115",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "product",
+          "bounding_box": {
+            "x": 271.659423828125,
+            "y": 458.5975646972656,
+            "width": 36.144775390625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 115,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-116",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "demonstrations",
+          "bounding_box": {
+            "x": 316.3598327636719,
+            "y": 458.5975646972656,
+            "width": 70.69601440429688,
+            "height": 12.161163330078125
+          },
+          "reading_order": 116,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-117",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "and",
+          "bounding_box": {
+            "x": 395.58160400390625,
+            "y": 458.5975646972656,
+            "width": 18.45587158203125,
+            "height": 12.161163330078125
+          },
+          "reading_order": 117,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-118",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "clear,",
+          "bounding_box": {
+            "x": 422.563232421875,
+            "y": 458.5975646972656,
+            "width": 26.7027587890625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 118,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-119",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "audience-tailored",
+          "bounding_box": {
+            "x": 457.9112854003906,
+            "y": 458.5975646972656,
+            "width": 79.23684692382812,
+            "height": 12.161163330078125
+          },
+          "reading_order": 119,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-120",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "value",
+          "bounding_box": {
+            "x": 545.6738891601562,
+            "y": 458.5975646972656,
+            "width": 25.15887451171875,
+            "height": 12.161163330078125
+          },
+          "reading_order": 120,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-121",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "propositions.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 470.7175598144531,
+            "width": 61.3018798828125,
+            "height": 12.161163330078125
+          },
+          "reading_order": 121,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-122",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 485.0602111816406,
+            "width": 4.58160400390625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 122,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-123",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Troubleshot and maintained workstation equipment",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 485.7175598144531,
+            "width": 238.1934814453125,
+            "height": 12.161163330078125
+          },
+          "reading_order": 123,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-124",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": ", acting as a peer resource",
+          "bounding_box": {
+            "x": 452.8599853515625,
+            "y": 485.7175598144531,
+            "width": 117.85650634765625,
+            "height": 12.161163330078125
+          },
+          "reading_order": 124,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-125",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "for new team members.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 497.8375549316406,
+            "width": 104.62188720703125,
+            "height": 12.161163330078125
+          },
+          "reading_order": 125,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-126",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Leadership & Community",
+          "bounding_box": {
+            "x": 237.52999877929688,
+            "y": 527.237548828125,
+            "width": 139.08187866210938,
+            "height": 12.1611328125
+          },
+          "reading_order": 126,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-127",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Mar 2026 \u2013 May 2026",
+          "bounding_box": {
+            "x": 43.20000076293945,
+            "y": 553.757568359375,
+            "width": 91.47414779663086,
+            "height": 12.1611328125
+          },
+          "reading_order": 127,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-128",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Leadership 4Impact Cohort Member",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 553.757568359375,
+            "width": 165.84188842773438,
+            "height": 12.1611328125
+          },
+          "reading_order": 128,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-129",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Study Melbourne, Melbourne",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 565.99755859375,
+            "width": 126.84188842773438,
+            "height": 12.1611328125
+          },
+          "reading_order": 129,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-130",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 578.2101440429688,
+            "width": 4.58160400390625,
+            "height": 12.16119384765625
+          },
+          "reading_order": 130,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-131",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Directed team development of",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 578.8675537109375,
+            "width": 146.11856079101562,
+            "height": 12.1611328125
+          },
+          "reading_order": 131,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-132",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Edu Bridge",
+          "bounding_box": {
+            "x": 364.8699951171875,
+            "y": 578.8675537109375,
+            "width": 52.86767578125,
+            "height": 12.1611328125
+          },
+          "reading_order": 132,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-133",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": ", an EdTech platform improving",
+          "bounding_box": {
+            "x": 417.7900085449219,
+            "y": 578.8675537109375,
+            "width": 152.90591430664062,
+            "height": 12.1611328125
+          },
+          "reading_order": 133,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-134",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "education accessibility progressing from ideation through pivot to final",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 591.1076049804688,
+            "width": 356.17938232421875,
+            "height": 12.1611328125
+          },
+          "reading_order": 134,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-135",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "presentation.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 603.2276000976562,
+            "width": 59.98187255859375,
+            "height": 12.1611328125
+          },
+          "reading_order": 135,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-136",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 617.4501953125,
+            "width": 4.58160400390625,
+            "height": 12.16119384765625
+          },
+          "reading_order": 136,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-137",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Developed collaboration, social impact thinking, and stakeholder communication",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 618.1076049804688,
+            "width": 356.13946533203125,
+            "height": 12.1611328125
+          },
+          "reading_order": 137,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-138",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "skills in a structured leadership program.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 630.2276000976562,
+            "width": 178.08187866210938,
+            "height": 12.1611328125
+          },
+          "reading_order": 138,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-139",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Oct 2024 \u2013 Oct 2025",
+          "bounding_box": {
+            "x": 43.20000076293945,
+            "y": 656.74755859375,
+            "width": 88.23415756225586,
+            "height": 12.1611328125
+          },
+          "reading_order": 139,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-140",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Student Ambassador",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 656.74755859375,
+            "width": 97.78189086914062,
+            "height": 12.1611328125
+          },
+          "reading_order": 140,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-141",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Deakin College, Burwood",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 668.987548828125,
+            "width": 113.02188110351562,
+            "height": 12.1611328125
+          },
+          "reading_order": 141,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-142",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 681.170166015625,
+            "width": 4.58160400390625,
+            "height": 12.16119384765625
+          },
+          "reading_order": 142,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-143",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Conducted on-campus student events and academic sessions, ensuring smooth",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 681.8275756835938,
+            "width": 356.2542724609375,
+            "height": 12.1611328125
+          },
+          "reading_order": 143,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-144",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "coordination and positive engagement experiences.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 693.943603515625,
+            "width": 224.40188598632812,
+            "height": 12.1611328125
+          },
+          "reading_order": 144,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-145",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "\u2022",
+          "bounding_box": {
+            "x": 196.25,
+            "y": 708.2861938476562,
+            "width": 4.58160400390625,
+            "height": 12.16119384765625
+          },
+          "reading_order": 145,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "SymbolMT",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-146",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Increased student",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 708.943603515625,
+            "width": 81.80142211914062,
+            "height": 12.1611328125
+          },
+          "reading_order": 146,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-147",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "event attendance by over 50%",
+          "bounding_box": {
+            "x": 297.7699890136719,
+            "y": 708.943603515625,
+            "width": 141.45187377929688,
+            "height": 12.1611328125
+          },
+          "reading_order": 147,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos,Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-148",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "through communication and",
+          "bounding_box": {
+            "x": 439.3900146484375,
+            "y": 708.943603515625,
+            "width": 131.37677001953125,
+            "height": 12.1611328125
+          },
+          "reading_order": 148,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-149",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "structured outreach.",
+          "bounding_box": {
+            "x": 214.25,
+            "y": 721.0635986328125,
+            "width": 91.3018798828125,
+            "height": 12.1611328125
+          },
+          "reading_order": 149,
+          "style": {
+            "font_size": 9.960000038146973,
+            "font": "Aptos",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        }
+      ]
+    }
+  ]
+}

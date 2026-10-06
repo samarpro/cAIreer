@@ -1,0 +1,2581 @@
+{
+  "suite": "resume-spatial-parsing",
+  "runs": [
+    {
+      "case_id": "sam-kanu-resume-01",
+      "permission": "synthetic",
+      "candidate": "pymupdf-y-rows",
+      "code_revision": "b943031",
+      "runtime": {
+        "python": "3.13.7",
+        "system": "Darwin",
+        "machine": "arm64"
+      },
+      "quality": {
+        "text_recovery": 0.924126678039012,
+        "reading_order": 0.28421052631578947,
+        "node_coverage": 0.4444444444444444,
+        "spatial_overlap": 0.006361374716953223,
+        "label_accuracy": 0.0
+      },
+      "resources": {
+        "wall_seconds": 3.259421666007256,
+        "cpu_seconds": 3.149215,
+        "peak_python_alloc_bytes": 433647,
+        "process_max_rss_bytes": 75202560
+      },
+      "hosted_usage": {
+        "model": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null
+      },
+      "counts": {
+        "expected_nodes": 63,
+        "actual_nodes": 127
+      },
+      "actual": [
+        {
+          "node_id": "page-1-span-18",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Sam Kanu",
+          "bounding_box": {
+            "x": 222.79495239257812,
+            "y": 11.488765716552734,
+            "width": 153.04583740234375,
+            "height": 41.67319107055664
+          },
+          "reading_order": 0,
+          "style": {
+            "font_size": 32.00706100463867,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-16",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "+61-0415856919 | samguptakanu@gmail.com | linkedin.com/in/samkanu/ | github.com/samarpro",
+          "bounding_box": {
+            "x": 98.00335693359375,
+            "y": 53.27965545654297,
+            "width": 399.4856262207031,
+            "height": 11.719573974609375
+          },
+          "reading_order": 1,
+          "style": {
+            "font_size": 9.001211166381836,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-17",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Melbourne , VIC",
+          "bounding_box": {
+            "x": 265.0576477050781,
+            "y": 69.7862548828125,
+            "width": 65.3671875,
+            "height": 11.719573974609375
+          },
+          "reading_order": 2,
+          "style": {
+            "font_size": 9.001211166381836,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-19",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "PROFESSIONAL SUMMARY",
+          "bounding_box": {
+            "x": 55.780521392822266,
+            "y": 96.32196807861328,
+            "width": 160.11931991577148,
+            "height": 14.320884704589844
+          },
+          "reading_order": 3,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-21",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Detail-oriented IT professional with practical experience across application support, quality assurance, and",
+          "bounding_box": {
+            "x": 55.780521392822266,
+            "y": 111.03228759765625,
+            "width": 494.672176361084,
+            "height": 13.021652221679688
+          },
+          "reading_order": 4,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-22",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "cloud-based environments. Known for a systematic approach to troubleshooting, documentation, and",
+          "bounding_box": {
+            "x": 55.780521392822266,
+            "y": 124.5373764038086,
+            "width": 471.69262313842773,
+            "height": 13.021644592285156
+          },
+          "reading_order": 5,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-23",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "process improvement- having delivered automation solutions that reduced manual overhead by 5+ hours",
+          "bounding_box": {
+            "x": 55.780521392822266,
+            "y": 138.04244995117188,
+            "width": 489.05212020874023,
+            "height": 13.021652221679688
+          },
+          "reading_order": 6,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-24",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "monthly across teams of 500+ users. Comfortable working within cross-functional environments and liaising",
+          "bounding_box": {
+            "x": 55.780521392822266,
+            "y": 151.54754638671875,
+            "width": 501.5319175720215,
+            "height": 13.021652221679688
+          },
+          "reading_order": 7,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-25",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "across technical and non-technical stakeholders. Familiar with Azure cloud services, AWS, webhook-based",
+          "bounding_box": {
+            "x": 55.780521392822266,
+            "y": 165.05262756347656,
+            "width": 493.12218856811523,
+            "height": 13.021652221679688
+          },
+          "reading_order": 8,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-26",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "integrations, and security-conscious development practices, with a strong commitment to compliance,",
+          "bounding_box": {
+            "x": 55.780521392822266,
+            "y": 178.55772399902344,
+            "width": 477.6918296813965,
+            "height": 13.021652221679688
+          },
+          "reading_order": 9,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-27",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "system integrity, and continuous improvement.",
+          "bounding_box": {
+            "x": 55.780521392822266,
+            "y": 192.06280517578125,
+            "width": 218.42644882202148,
+            "height": 13.021652221679688
+          },
+          "reading_order": 10,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-28",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "KEY COMPETENCIES",
+          "bounding_box": {
+            "x": 55.780521392822266,
+            "y": 221.29928588867188,
+            "width": 124.14069747924805,
+            "height": 14.320877075195312
+          },
+          "reading_order": 11,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-0",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "AI Systems & Automation",
+          "bounding_box": {
+            "x": 66.1441650390625,
+            "y": 237.1654052734375,
+            "width": 126.41140747070312,
+            "height": 13.021652221679688
+          },
+          "reading_order": 12,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-1",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Agentic Systems \u00b7 Autonomous Workflows \u00b7 AI-Driven Data Aggregation \u00b7 Intelligent",
+          "bounding_box": {
+            "x": 83.14276123046875,
+            "y": 250.67050170898438,
+            "width": 381.7737731933594,
+            "height": 13.02166748046875
+          },
+          "reading_order": 13,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-2",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Information Pipelines",
+          "bounding_box": {
+            "x": 83.14276123046875,
+            "y": 264.1755676269531,
+            "width": 96.9990234375,
+            "height": 13.02166748046875
+          },
+          "reading_order": 14,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-3",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Large Language Model (LLM) Integration \u00b7 LangChain \u00b7 LlamaIndex \u00b7 Retrieval-Augmented",
+          "bounding_box": {
+            "x": 83.14276123046875,
+            "y": 277.6806640625,
+            "width": 406.9537353515625,
+            "height": 13.02166748046875
+          },
+          "reading_order": 15,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-4",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Generation (RAG)",
+          "bounding_box": {
+            "x": 83.14276123046875,
+            "y": 291.1857604980469,
+            "width": 81.83909606933594,
+            "height": 13.02166748046875
+          },
+          "reading_order": 16,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-5",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Software & Technical Implementation",
+          "bounding_box": {
+            "x": 66.1441650390625,
+            "y": 304.69085693359375,
+            "width": 183.0370635986328,
+            "height": 13.02166748046875
+          },
+          "reading_order": 17,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-6",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Python Development \u00b7 Web Scraping (Playwright, Selenium) \u00b7 API Integration \u00b7 Webhook",
+          "bounding_box": {
+            "x": 83.14276123046875,
+            "y": 318.1959228515625,
+            "width": 399.9236145019531,
+            "height": 13.02166748046875
+          },
+          "reading_order": 18,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-7",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Development",
+          "bounding_box": {
+            "x": 83.14276123046875,
+            "y": 331.7010192871094,
+            "width": 62.19947814941406,
+            "height": 13.02166748046875
+          },
+          "reading_order": 19,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-8",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "JavaScript / TypeScript \u00b7 React \u00b7 Django \u00b7 Node.js \u00b7 REST API Design",
+          "bounding_box": {
+            "x": 83.14276123046875,
+            "y": 345.20611572265625,
+            "width": 304.63543701171875,
+            "height": 13.02166748046875
+          },
+          "reading_order": 20,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-9",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "SQL \u00b7 NoSQL \u00b7 PostgreSQL \u00b7 Mongo DB",
+          "bounding_box": {
+            "x": 83.14276123046875,
+            "y": 358.711181640625,
+            "width": 173.91778564453125,
+            "height": 13.02166748046875
+          },
+          "reading_order": 21,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-10",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Vector Databases \u00b7 Hybrid Search (Embeddings + BM25) \u00b7 NLP Pipelines",
+          "bounding_box": {
+            "x": 83.14276123046875,
+            "y": 372.21630859375,
+            "width": 330.2303771972656,
+            "height": 13.02166748046875
+          },
+          "reading_order": 22,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-11",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "N8N Workflow Automation \u00b7 Process Optimization \u00b7 Production Deployment",
+          "bounding_box": {
+            "x": 83.14276123046875,
+            "y": 385.72137451171875,
+            "width": 346.73443603515625,
+            "height": 13.02166748046875
+          },
+          "reading_order": 23,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-12",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Project Delivery",
+          "bounding_box": {
+            "x": 66.1441650390625,
+            "y": 399.2264709472656,
+            "width": 77.1295166015625,
+            "height": 13.02166748046875
+          },
+          "reading_order": 24,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-13",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "End-to-End System Architecture \u00b7 Rapid Prototyping \u00b7 Scalable Backend Design",
+          "bounding_box": {
+            "x": 83.14276123046875,
+            "y": 412.7315673828125,
+            "width": 366.7843322753906,
+            "height": 13.02166748046875
+          },
+          "reading_order": 25,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-14",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Data Pipeline Design \u00b7 Production Deployment \u00b7 Technical Documentation",
+          "bounding_box": {
+            "x": 83.14276123046875,
+            "y": 426.23663330078125,
+            "width": 337.9848937988281,
+            "height": 13.02166748046875
+          },
+          "reading_order": 26,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-15",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Stakeholder Communication \u00b7 Translating Business Problems into Technical Solutions",
+          "bounding_box": {
+            "x": 83.14276123046875,
+            "y": 439.7417297363281,
+            "width": 391.3539123535156,
+            "height": 13.02166748046875
+          },
+          "reading_order": 27,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-20",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "PROFESSIONAL EXPERIENCE",
+          "bounding_box": {
+            "x": 55.780521392822266,
+            "y": 469.13824462890625,
+            "width": 173.74534225463867,
+            "height": 14.320892333984375
+          },
+          "reading_order": 28,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-38",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "HACK48 Hackathon Winner",
+          "bounding_box": {
+            "x": 66.1441650390625,
+            "y": 485.8660583496094,
+            "width": 146.1209259033203,
+            "height": 14.320892333984375
+          },
+          "reading_order": 29,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-39",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Hack48",
+          "bounding_box": {
+            "x": 66.1441650390625,
+            "y": 503.1225891113281,
+            "width": 40.91925811767578,
+            "height": 14.320892333984375
+          },
+          "reading_order": 30,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-40",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Built a production-grade multi-agent orchestration platform with real-time observability,",
+          "bounding_box": {
+            "x": 77.5481948852539,
+            "y": 518.3533325195312,
+            "width": 410.6129684448242,
+            "height": 13.02166748046875
+          },
+          "reading_order": 31,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-41",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "human-in-the-loop approvals, and a live web dashboard powered by WebSocket \u2014",
+          "bounding_box": {
+            "x": 77.5481948852539,
+            "y": 531.8583984375,
+            "width": 387.0143356323242,
+            "height": 13.02166748046875
+          },
+          "reading_order": 32,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-42",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "demonstrating end-to-end ownership from architecture through deployment.",
+          "bounding_box": {
+            "x": 77.5481948852539,
+            "y": 545.3634643554688,
+            "width": 360.26390838623047,
+            "height": 13.02166748046875
+          },
+          "reading_order": 33,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-43",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Designed a parallel agent swarm where a root agent spawns depth-limited child sessions",
+          "bounding_box": {
+            "x": 94.54678344726562,
+            "y": 558.8685913085938,
+            "width": 411.243408203125,
+            "height": 13.02166748046875
+          },
+          "reading_order": 34,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-44",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "executing concurrently via a Redis event bus",
+          "bounding_box": {
+            "x": 94.54678344726562,
+            "y": 572.3736572265625,
+            "width": 207.14703369140625,
+            "height": 13.02166748046875
+          },
+          "reading_order": 35,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-45",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Integrated Composio's MCP gateway (calendar, email, search) and AWS Bedrock (Claude)",
+          "bounding_box": {
+            "x": 94.54678344726562,
+            "y": 585.8787841796875,
+            "width": 413.7132263183594,
+            "height": 13.02166748046875
+          },
+          "reading_order": 36,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-46",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "for inference, with Guardrails for safety enforcement",
+          "bounding_box": {
+            "x": 94.54678344726562,
+            "y": 599.3838500976562,
+            "width": 242.54629516601562,
+            "height": 13.02166748046875
+          },
+          "reading_order": 37,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-47",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Shipped sandboxed task execution in ephemeral Docker containers across bash, browser,",
+          "bounding_box": {
+            "x": 94.54678344726562,
+            "y": 612.888916015625,
+            "width": 415.1728820800781,
+            "height": 13.02166748046875
+          },
+          "reading_order": 38,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-48",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "and computer-use agents, with a risk classifier gating high-risk actions",
+          "bounding_box": {
+            "x": 94.54678344726562,
+            "y": 626.39404296875,
+            "width": 326.2749328613281,
+            "height": 13.02166748046875
+          },
+          "reading_order": 39,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-49",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Exposed multi-channel interfaces via Telegram, WhatsApp, and SMS webhooks, routed",
+          "bounding_box": {
+            "x": 94.54678344726562,
+            "y": 639.8991088867188,
+            "width": 400.1138610839844,
+            "height": 13.02166748046875
+          },
+          "reading_order": 40,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-50",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "through a FastAPI gateway to the session manager",
+          "bounding_box": {
+            "x": 94.54678344726562,
+            "y": 653.4041748046875,
+            "width": 233.54644775390625,
+            "height": 13.02166748046875
+          },
+          "reading_order": 41,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-36",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "AI Market Intelligence Monitoring System (MVP)",
+          "bounding_box": {
+            "x": 66.1441650390625,
+            "y": 683.3956909179688,
+            "width": 254.45718383789062,
+            "height": 14.32086181640625
+          },
+          "reading_order": 42,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-37",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Project | Building Group",
+          "bounding_box": {
+            "x": 66.1441650390625,
+            "y": 700.6522216796875,
+            "width": 125.03057861328125,
+            "height": 14.32086181640625
+          },
+          "reading_order": 43,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-29",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Built a prototype AI monitoring system designed to aggregate market signals and surface",
+          "bounding_box": {
+            "x": 77.5481948852539,
+            "y": 717.3742065429688,
+            "width": 411.8635787963867,
+            "height": 13.02166748046875
+          },
+          "reading_order": 44,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-30",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "insights relevant to investors and businesses. The system continuously collects data from",
+          "bounding_box": {
+            "x": 77.5481948852539,
+            "y": 730.8792724609375,
+            "width": 414.9239730834961,
+            "height": 13.02166748046875
+          },
+          "reading_order": 45,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-31",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "multiple sources and structures it into actionable information.",
+          "bounding_box": {
+            "x": 77.5481948852539,
+            "y": 744.3843383789062,
+            "width": 285.75521087646484,
+            "height": 13.02166748046875
+          },
+          "reading_order": 46,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-32",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Tracks precious metal prices, stock data (ASX and NASDAQ), and Melbourne prestige",
+          "bounding_box": {
+            "x": 94.54678344726562,
+            "y": 757.8894653320312,
+            "width": 393.6539001464844,
+            "height": 13.02166748046875
+          },
+          "reading_order": 47,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-33",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "property listings",
+          "bounding_box": {
+            "x": 94.54678344726562,
+            "y": 771.39453125,
+            "width": 75.619384765625,
+            "height": 13.02166748046875
+          },
+          "reading_order": 48,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-34",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "Filters property data for high-value suburbs such as Toorak, aligning insights with investor",
+          "bounding_box": {
+            "x": 94.54678344726562,
+            "y": 784.899658203125,
+            "width": 414.3032531738281,
+            "height": 13.02166748046875
+          },
+          "reading_order": 49,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-1-span-35",
+          "page_number": 1,
+          "kind": "unknown",
+          "text": "focus areas",
+          "bounding_box": {
+            "x": 94.54678344726562,
+            "y": 798.4047241210938,
+            "width": 53.459808349609375,
+            "height": 13.02166748046875
+          },
+          "reading_order": 50,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-92",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Designed to evolve into an AI briefing system that summarises market signals and",
+          "bounding_box": {
+            "x": 91.47026062011719,
+            "y": 30.62729263305664,
+            "width": 377.6542205810547,
+            "height": 13.021648406982422
+          },
+          "reading_order": 51,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-93",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "macroeconomic news",
+          "bounding_box": {
+            "x": 91.47026062011719,
+            "y": 44.132381439208984,
+            "width": 102.19895935058594,
+            "height": 13.021648406982422
+          },
+          "reading_order": 52,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-94",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Developed as a rapid prototype to explore intelligent financial monitoring systems",
+          "bounding_box": {
+            "x": 91.47026062011719,
+            "y": 57.63746643066406,
+            "width": 380.1539764404297,
+            "height": 13.021652221679688
+          },
+          "reading_order": 53,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-78",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "AI University Assistant",
+          "bounding_box": {
+            "x": 65.65335845947266,
+            "y": 82.38121032714844,
+            "width": 120.12557220458984,
+            "height": 14.320884704589844
+          },
+          "reading_order": 54,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-79",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Deakin College",
+          "bounding_box": {
+            "x": 65.65335845947266,
+            "y": 95.88629913330078,
+            "width": 79.09857940673828,
+            "height": 14.320884704589844
+          },
+          "reading_order": 55,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-80",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Built an AI assistant that helps students instantly find answers to questions about university",
+          "bounding_box": {
+            "x": 91.45732116699219,
+            "y": 115.02166748046875,
+            "width": 422.7930450439453,
+            "height": 13.021652221679688
+          },
+          "reading_order": 56,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-81",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "systems and policies, removing the need to wait days for in-person consultations. The system",
+          "bounding_box": {
+            "x": 91.45732116699219,
+            "y": 127.02619171142578,
+            "width": 431.8231964111328,
+            "height": 13.021644592285156
+          },
+          "reading_order": 57,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-82",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "aggregates information from official college resources and generates contextual answers in",
+          "bounding_box": {
+            "x": 91.45732116699219,
+            "y": 139.03070068359375,
+            "width": 418.4231414794922,
+            "height": 13.021652221679688
+          },
+          "reading_order": 58,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-83",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "natural language.",
+          "bounding_box": {
+            "x": 91.45732116699219,
+            "y": 151.03521728515625,
+            "width": 77.44888305664062,
+            "height": 13.021652221679688
+          },
+          "reading_order": 59,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-84",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Deployed RAG-powered chatbot serving 500+ students with automated response system,",
+          "bounding_box": {
+            "x": 108.45591735839844,
+            "y": 163.0397491455078,
+            "width": 417.1823272705078,
+            "height": 13.021652221679688
+          },
+          "reading_order": 60,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-85",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "currently implementing Outlook/Gmail integration for email follow-ups and supervised AI",
+          "bounding_box": {
+            "x": 108.45591735839844,
+            "y": 175.04428100585938,
+            "width": 408.77296447753906,
+            "height": 13.021652221679688
+          },
+          "reading_order": 61,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-86",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "responses",
+          "bounding_box": {
+            "x": 108.45591735839844,
+            "y": 187.04879760742188,
+            "width": 47.73985290527344,
+            "height": 13.021652221679688
+          },
+          "reading_order": 62,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-87",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Scraped and processed 200+ official college websites to build the knowledge base",
+          "bounding_box": {
+            "x": 108.45591735839844,
+            "y": 199.05331420898438,
+            "width": 383.6138458251953,
+            "height": 13.021652221679688
+          },
+          "reading_order": 63,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-88",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Implemented an AI retrieval system that returns accurate answers grounded in official",
+          "bounding_box": {
+            "x": 108.45591735839844,
+            "y": 211.05784606933594,
+            "width": 394.3529815673828,
+            "height": 13.021652221679688
+          },
+          "reading_order": 64,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-89",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "sources",
+          "bounding_box": {
+            "x": 108.45591735839844,
+            "y": 223.06236267089844,
+            "width": 36.470062255859375,
+            "height": 13.021652221679688
+          },
+          "reading_order": 65,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-90",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Presented the system to Deakin College leadership, after which it was adopted and deployed",
+          "bounding_box": {
+            "x": 108.45591735839844,
+            "y": 235.06689453125,
+            "width": 427.8828887939453,
+            "height": 13.021652221679688
+          },
+          "reading_order": 66,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-91",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "for students",
+          "bounding_box": {
+            "x": 108.45591735839844,
+            "y": 247.0714111328125,
+            "width": 56.25965881347656,
+            "height": 13.02166748046875
+          },
+          "reading_order": 67,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-65",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Technologies: Python, LangChain, LlamaIndex, Playwright, Selenium, vector search, Google Gemini.",
+          "bounding_box": {
+            "x": 90.05220794677734,
+            "y": 263.4872741699219,
+            "width": 449.10221099853516,
+            "height": 13.02166748046875
+          },
+          "reading_order": 68,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Italic",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-63",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Automation Developer & Supervisor",
+          "bounding_box": {
+            "x": 65.65335845947266,
+            "y": 292.2682189941406,
+            "width": 194.03368377685547,
+            "height": 14.320892333984375
+          },
+          "reading_order": 69,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-62",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "August 2024 - Present",
+          "bounding_box": {
+            "x": 374.7695617675781,
+            "y": 292.6686096191406,
+            "width": 120.070556640625,
+            "height": 14.320892333984375
+          },
+          "reading_order": 70,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-64",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Mad Mex",
+          "bounding_box": {
+            "x": 65.65335845947266,
+            "y": 305.0230407714844,
+            "width": 48.29761505126953,
+            "height": 14.320892333984375
+          },
+          "reading_order": 71,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-54",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Developed custom browser automation solution saving 900 minutes/month (15",
+          "bounding_box": {
+            "x": 93.74382019042969,
+            "y": 320.6861877441406,
+            "width": 365.64418029785156,
+            "height": 13.02166748046875
+          },
+          "reading_order": 72,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-55",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "hours) by automating order placement, delivery tracking, and store management",
+          "bounding_box": {
+            "x": 93.74382019042969,
+            "y": 334.1912841796875,
+            "width": 371.4337921142578,
+            "height": 13.02166748046875
+          },
+          "reading_order": 73,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-56",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "processes",
+          "bounding_box": {
+            "x": 93.74382019042969,
+            "y": 347.6963806152344,
+            "width": 47.71986389160156,
+            "height": 13.02166748046875
+          },
+          "reading_order": 74,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-57",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Identified and prioritized automation opportunities based on ROI, focusing on non-",
+          "bounding_box": {
+            "x": 93.74382019042969,
+            "y": 361.2014465332031,
+            "width": 381.8339080810547,
+            "height": 13.02166748046875
+          },
+          "reading_order": 75,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-58",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "negotiable deliverables first",
+          "bounding_box": {
+            "x": 93.74382019042969,
+            "y": 374.70654296875,
+            "width": 127.03819274902344,
+            "height": 13.02166748046875
+          },
+          "reading_order": 76,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-59",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Built and deployed production-ready solutions using Python and Selenium.",
+          "bounding_box": {
+            "x": 93.74382019042969,
+            "y": 388.2116394042969,
+            "width": 344.69398498535156,
+            "height": 13.02166748046875
+          },
+          "reading_order": 77,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-60",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Created training materials that enabled team members to extend and maintain",
+          "bounding_box": {
+            "x": 93.74382019042969,
+            "y": 401.71673583984375,
+            "width": 363.50425720214844,
+            "height": 13.02166748046875
+          },
+          "reading_order": 78,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-61",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "automation systems post-implementation",
+          "bounding_box": {
+            "x": 93.74382019042969,
+            "y": 415.2218017578125,
+            "width": 195.3171844482422,
+            "height": 13.02166748046875
+          },
+          "reading_order": 79,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-51",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Supervisor",
+          "bounding_box": {
+            "x": 72.67237854003906,
+            "y": 432.2682189941406,
+            "width": 54.59937286376953,
+            "height": 13.6761474609375
+          },
+          "reading_order": 80,
+          "style": {
+            "font_size": 10.503957748413086,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-52",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Oversaw sales operations with accountability for performance, driving upselling",
+          "bounding_box": {
+            "x": 93.74382019042969,
+            "y": 452.0665588378906,
+            "width": 366.8543243408203,
+            "height": 13.02166748046875
+          },
+          "reading_order": 81,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-53",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "strategies and coordinating promotional activities across the team.",
+          "bounding_box": {
+            "x": 93.74382019042969,
+            "y": 465.5716552734375,
+            "width": 310.45484924316406,
+            "height": 13.02166748046875
+          },
+          "reading_order": 82,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-66",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "AI Newsletter Automation Platform",
+          "bounding_box": {
+            "x": 69.33377075195312,
+            "y": 498.5138244628906,
+            "width": 188.81686401367188,
+            "height": 14.320892333984375
+          },
+          "reading_order": 83,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-69",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "December 2025 - Present",
+          "bounding_box": {
+            "x": 363.1133728027344,
+            "y": 498.9141845703125,
+            "width": 138.07159423828125,
+            "height": 14.3209228515625
+          },
+          "reading_order": 84,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-67",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "AI Lead - DSEC",
+          "bounding_box": {
+            "x": 69.33377075195312,
+            "y": 511.2686462402344,
+            "width": 79.25291442871094,
+            "height": 14.320892333984375
+          },
+          "reading_order": 85,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-68",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Automation Project",
+          "bounding_box": {
+            "x": 69.33377075195312,
+            "y": 524.0234985351562,
+            "width": 104.312744140625,
+            "height": 14.32086181640625
+          },
+          "reading_order": 86,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-70",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Built a system that automatically gathers news from multiple sources and generates",
+          "bounding_box": {
+            "x": 84.25263214111328,
+            "y": 542.2373657226562,
+            "width": 386.1335983276367,
+            "height": 13.02166748046875
+          },
+          "reading_order": 87,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-71",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "structured newsletters, removing the need for manual curation.",
+          "bounding_box": {
+            "x": 84.25263214111328,
+            "y": 555.742431640625,
+            "width": 289.8248825073242,
+            "height": 13.02166748046875
+          },
+          "reading_order": 88,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-72",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Aggregates content from multiple news sources using automated data pipelines",
+          "bounding_box": {
+            "x": 101.251220703125,
+            "y": 569.2474975585938,
+            "width": 368.9239807128906,
+            "height": 13.02166748046875
+          },
+          "reading_order": 89,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-73",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Generates structured newsletters ready for publication",
+          "bounding_box": {
+            "x": 101.251220703125,
+            "y": 582.7526245117188,
+            "width": 254.02606201171875,
+            "height": 13.02166748046875
+          },
+          "reading_order": 90,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-74",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Developed a drag-and-drop template interface for editing and distribution",
+          "bounding_box": {
+            "x": 101.251220703125,
+            "y": 596.2576904296875,
+            "width": 344.364501953125,
+            "height": 13.02166748046875
+          },
+          "reading_order": 91,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-75",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Leading ongoing development as AI Lead of the project",
+          "bounding_box": {
+            "x": 101.251220703125,
+            "y": 609.7628173828125,
+            "width": 254.32589721679688,
+            "height": 13.02166748046875
+          },
+          "reading_order": 92,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-76",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Technologies: Python, RSS parsing, web scraping, AI summarisation pipelines, GitHub",
+          "bounding_box": {
+            "x": 84.25263214111328,
+            "y": 623.2678833007812,
+            "width": 389.4638900756836,
+            "height": 13.02166748046875
+          },
+          "reading_order": 93,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Italic",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-2-span-77",
+          "page_number": 2,
+          "kind": "unknown",
+          "text": "Actions.",
+          "bounding_box": {
+            "x": 84.25263214111328,
+            "y": 636.77294921875,
+            "width": 36.96959686279297,
+            "height": 13.02166748046875
+          },
+          "reading_order": 94,
+          "style": {
+            "font_size": 10.00126838684082,
+            "font": "DMSans-Italic",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-96",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Technical Skills",
+          "bounding_box": {
+            "x": 63.144527435302734,
+            "y": 27.575756072998047,
+            "width": 98.60319900512695,
+            "height": 14.32088851928711
+          },
+          "reading_order": 95,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-100",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Technical Support & QA",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 46.37974548339844,
+            "width": 116.01683044433594,
+            "height": 13.011882781982422
+          },
+          "reading_order": 96,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-101",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Application Support \u00b7 Quality Assurance & Testing \u00b7 Bug Documentation &",
+          "bounding_box": {
+            "x": 184.65628051757812,
+            "y": 46.37974548339844,
+            "width": 342.0497741699219,
+            "height": 13.011882781982422
+          },
+          "reading_order": 97,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-102",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Reporting \u00b7 User Acceptance Testing (UAT) \u00b7 UX Testing \u00b7 Human-Centred Product Design",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 59.88483810424805,
+            "width": 409.78892517089844,
+            "height": 13.011882781982422
+          },
+          "reading_order": 98,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-103",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Database Management",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 73.38992309570312,
+            "width": 112.3895263671875,
+            "height": 13.011886596679688
+          },
+          "reading_order": 99,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-104",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "SQL Databases \u00b7 Vector Databases \u00b7 Data Processing Pipelines \u00b7 Information",
+          "bounding_box": {
+            "x": 181.0220947265625,
+            "y": 73.38992309570312,
+            "width": 349.42022705078125,
+            "height": 13.011886596679688
+          },
+          "reading_order": 100,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-105",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Aggregation Pipelines",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 86.89500427246094,
+            "width": 99.53515625,
+            "height": 13.011886596679688
+          },
+          "reading_order": 101,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-106",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Security & Infrastructure",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 100.40010070800781,
+            "width": 120.950439453125,
+            "height": 13.011886596679688
+          },
+          "reading_order": 102,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-107",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Docker Containerisation \u00b7 CI/CD Pipelines (GitHub Actions) \u00b7 Cloud",
+          "bounding_box": {
+            "x": 189.58001708984375,
+            "y": 100.40010070800781,
+            "width": 307.9795227050781,
+            "height": 13.011886596679688
+          },
+          "reading_order": 103,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-108",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Integrations \u00b7 DDoS Awareness & Network Security Principles \u00b7 REST API Design",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 113.90518951416016,
+            "width": 361.65574645996094,
+            "height": 13.011886596679688
+          },
+          "reading_order": 104,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-109",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Cloud & Vendor Platforms",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 127.4102783203125,
+            "width": 125.79429626464844,
+            "height": 13.011886596679688
+          },
+          "reading_order": 105,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-110",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "AWS (Bedrock) \u00b7 API Integration \u00b7 Webhook-Based Integrations \u00b7 Ngrok \u00b7",
+          "bounding_box": {
+            "x": 194.43341064453125,
+            "y": 127.4102783203125,
+            "width": 329.01226806640625,
+            "height": 13.011886596679688
+          },
+          "reading_order": 106,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-111",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Automation Tooling",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 140.91537475585938,
+            "width": 90.24641418457031,
+            "height": 13.011886596679688
+          },
+          "reading_order": 107,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-112",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Automation & Workflow Orchestration",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 154.4204559326172,
+            "width": 186.3632049560547,
+            "height": 13.011886596679688
+          },
+          "reading_order": 108,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-113",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "AI Workflow Automation (n8n) \u00b7 Process Automation \u00b7",
+          "bounding_box": {
+            "x": 254.9952850341797,
+            "y": 154.4204559326172,
+            "width": 247.56849670410156,
+            "height": 13.011886596679688
+          },
+          "reading_order": 109,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-114",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Workflow Orchestration \u00b7 Scheduled Data Pipelines \u00b7 Web Scraping & Data Extraction (Playwright \u00b7",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 167.925537109375,
+            "width": 448.87059020996094,
+            "height": 13.011886596679688
+          },
+          "reading_order": 110,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-115",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Selenium)",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 181.43063354492188,
+            "width": 45.82792663574219,
+            "height": 13.011886596679688
+          },
+          "reading_order": 111,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-116",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "AI Systems & LLM Applications",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 194.93572998046875,
+            "width": 149.91583251953125,
+            "height": 13.011886596679688
+          },
+          "reading_order": 112,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-117",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "LLM Integration \u00b7 AI Agents \u00b7 Agentic Workflows \u00b7 RAG \u00b7 LangChain \u00b7",
+          "bounding_box": {
+            "x": 218.54795837402344,
+            "y": 194.93572998046875,
+            "width": 306.54884338378906,
+            "height": 13.011886596679688
+          },
+          "reading_order": 113,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-118",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "LlamaIndex \u00b7 NLP \u00b7 AI-Driven Data Analysis",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 208.4407958984375,
+            "width": 193.0146942138672,
+            "height": 13.011886596679688
+          },
+          "reading_order": 114,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-119",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Development Tools & Backend Backend Development",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 221.94589233398438,
+            "width": 260.68434143066406,
+            "height": 13.011886596679688
+          },
+          "reading_order": 115,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-120",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "(Django \u00b7 Node.js) \u00b7 Frontend Development",
+          "bounding_box": {
+            "x": 329.3201904296875,
+            "y": 221.94589233398438,
+            "width": 197.478759765625,
+            "height": 13.011886596679688
+          },
+          "reading_order": 116,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-121",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "(React \u00b7 Tailwind CSS) \u00b7 Git \u00b7 GitHub \u00b7 Docker",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 235.45098876953125,
+            "width": 201.15428161621094,
+            "height": 13.011886596679688
+          },
+          "reading_order": 117,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-95",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "EDUCATION & CERTIFICATIONS",
+          "bounding_box": {
+            "x": 63.144527435302734,
+            "y": 281.7918701171875,
+            "width": 193.63949966430664,
+            "height": 14.320892333984375
+          },
+          "reading_order": 118,
+          "style": {
+            "font_size": 10.999144554138184,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-97",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Bachelor of Information Technology",
+          "bounding_box": {
+            "x": 69.3546142578125,
+            "y": 303.2434387207031,
+            "width": 172.24984741210938,
+            "height": 13.011871337890625
+          },
+          "reading_order": 119,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-98",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Majors: Networking and Cloud Computing",
+          "bounding_box": {
+            "x": 69.3546142578125,
+            "y": 320.7020568847656,
+            "width": 191.7464599609375,
+            "height": 13.011871337890625
+          },
+          "reading_order": 120,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-99",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Deakin University - Ongoing",
+          "bounding_box": {
+            "x": 69.3546142578125,
+            "y": 332.7065734863281,
+            "width": 128.79083251953125,
+            "height": 13.011871337890625
+          },
+          "reading_order": 121,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-124",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Diploma of IT",
+          "bounding_box": {
+            "x": 68.63209533691406,
+            "y": 359.9134521484375,
+            "width": 62.9788818359375,
+            "height": 13.011871337890625
+          },
+          "reading_order": 122,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-125",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Completed with focus on practical automation and AI implementation",
+          "bounding_box": {
+            "x": 69.3546142578125,
+            "y": 377.2392883300781,
+            "width": 322.9814758300781,
+            "height": 13.011871337890625
+          },
+          "reading_order": 123,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-126",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Deakin College : WAM ~92",
+          "bounding_box": {
+            "x": 69.3546142578125,
+            "y": 387.74322509765625,
+            "width": 120.00137329101562,
+            "height": 13.011871337890625
+          },
+          "reading_order": 124,
+          "style": {
+            "font_size": 9.993765830993652,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-123",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "REFERENCES",
+          "bounding_box": {
+            "x": 67.24017333984375,
+            "y": 420.18634033203125,
+            "width": 73.99601745605469,
+            "height": 15.6298828125
+          },
+          "reading_order": 125,
+          "style": {
+            "font_size": 12.004523277282715,
+            "font": "DMSans-Bold",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        },
+        {
+          "node_id": "page-3-span-122",
+          "page_number": 3,
+          "kind": "unknown",
+          "text": "Available on request.",
+          "bounding_box": {
+            "x": 66.99398040771484,
+            "y": 437.6589660644531,
+            "width": 86.60161590576172,
+            "height": 11.715972900390625
+          },
+          "reading_order": 126,
+          "style": {
+            "font_size": 8.998441696166992,
+            "font": "DMSans-Regular",
+            "geometry_method": "pymupdf_span_bbox"
+          },
+          "parent_node_id": null,
+          "confidence": 0.0
+        }
+      ]
+    }
+  ]
+}

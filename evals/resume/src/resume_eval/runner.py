@@ -8,10 +8,12 @@ import time
 import tracemalloc
 from pathlib import Path
 from typing import Any
+from collections.abc import Callable
 
 from resume_eval.parser import parse_pdf
 from resume_eval.metrics import evaluate_nodes
 from resume_eval.schema import ResumeNode
+from resume_eval.grouping import group_lines, prepare_lines
 
 
 def git_revision(repo: Path) -> str:
@@ -30,7 +32,11 @@ def max_rss_bytes() -> int:
     return int(value if platform.system() == "Darwin" else value * 1024)
 
 
-def evaluate_case(case_path: Path, repo: Path) -> dict[str, Any]:
+def evaluate_case(
+    case_path: Path, repo: Path,
+    grouping_evaluator: Callable[[str, dict], dict] | None = None,
+    context_lines: int = 8, token_budget: int = 24_000,
+) -> dict[str, Any]:
     case = json.loads(case_path.read_text())
     expected = [ResumeNode.model_validate(value) for value in case["nodes"]]
     pdf_path = (case_path.parent / case["pdf"]).resolve()
@@ -44,7 +50,7 @@ def evaluate_case(case_path: Path, repo: Path) -> dict[str, Any]:
     _, peak_python_bytes = tracemalloc.get_traced_memory()
     tracemalloc.stop()
 
-    return {
+    report = {
         "case_id": case["case_id"],
         "permission": case["permission"],
         "candidate": "pymupdf-spans",
@@ -74,3 +80,11 @@ def evaluate_case(case_path: Path, repo: Path) -> dict[str, Any]:
         # "expected": [node.model_dump() for node in expected],
         "actual": [node.model_dump() for node in actual],
     }
+    if grouping_evaluator is not None:
+        grouping_start = time.perf_counter()
+        report["grouping"] = group_lines(
+            prepare_lines(actual), grouping_evaluator,
+            context_lines=context_lines, token_budget=token_budget,
+        )
+        report["grouping"]["wall_seconds"] = time.perf_counter() - grouping_start
+    return report
